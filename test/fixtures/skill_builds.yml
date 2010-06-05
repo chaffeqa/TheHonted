@@ -1,0 +1,59 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  skill_1: MyString
+  skill_2: MyString
+  skill_3: MyString
+  skill_4: MyString
+  skill_5: MyString
+  skill_6: MyString
+  skill_7: MyString
+  skill_8: MyString
+  skill_9: MyString
+  skill_10: MyString
+  skill_11: MyString
+  skill_12: MyString
+  skill_13: MyString
+  skill_14: MyString
+  skill_15: MyString
+  skill_16: MyString
+  skill_17: MyString
+  skill_18: MyString
+  skill_19: MyString
+  skill_20: MyString
+  skill_21: MyString
+  skill_22: MyString
+  skill_23: MyString
+  skill_24: MyString
+  skill_25: MyString
+  reasoning: MyText
+  strategy_guide: 
+
+two:
+  skill_1: MyString
+  skill_2: MyString
+  skill_3: MyString
+  skill_4: MyString
+  skill_5: MyString
+  skill_6: MyString
+  skill_7: MyString
+  skill_8: MyString
+  skill_9: MyString
+  skill_10: MyString
+  skill_11: MyString
+  skill_12: MyString
+  skill_13: MyString
+  skill_14: MyString
+  skill_15: MyString
+  skill_16: MyString
+  skill_17: MyString
+  skill_18: MyString
+  skill_19: MyString
+  skill_20: MyString
+  skill_21: MyString
+  skill_22: MyString
+  skill_23: MyString
+  skill_24: MyString
+  skill_25: MyString
+  reasoning: MyText
+  strategy_guide: 

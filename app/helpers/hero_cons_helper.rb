@@ -1,0 +1,2 @@
+module HeroConsHelper
+end

@@ -1,0 +1,27 @@
+<h1>Listing strategy_guides</h1>
+
+<table>
+  <tr>
+    <th>Hero</th>
+    <th>User</th>
+    <th>About this guide</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @strategy_guides.each do |strategy_guide| %>
+  <tr>
+    <td><%= strategy_guide.hero %></td>
+    <td><%= strategy_guide.user %></td>
+    <td><%= strategy_guide.about_this_guide %></td>
+    <td><%= link_to 'Show', strategy_guide %></td>
+    <td><%= link_to 'Edit', edit_strategy_guide_path(strategy_guide) %></td>
+    <td><%= link_to 'Destroy', strategy_guide, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Strategy guide', new_strategy_guide_path %>

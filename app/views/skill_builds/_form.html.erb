@@ -1,0 +1,124 @@
+<%= form_for(@skill_build) do |f| %>
+  <% if @skill_build.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@skill_build.errors.count, "error") %> prohibited this skill_build from being saved:</h2>
+    <ul>
+    <% @skill_build.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :skill_1 %><br />
+    <%= f.text_field :skill_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :skill_2 %><br />
+    <%= f.text_field :skill_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :skill_3 %><br />
+    <%= f.text_field :skill_3 %>
+  </div>
+  <div class="field">
+    <%= f.label :skill_4 %><br />
+    <%= f.text_field :skill_4 %>
+  </div>
+  <div class="field">
+    <%= f.label :skill_5 %><br />
+    <%= f.text_field :skill_5 %>
+  </div>
+  <div class="field">
+    <%= f.label :skill_6 %><br />
+    <%= f.text_field :skill_6 %>
+  </div>
+  <div class="field">
+    <%= f.label :skill_7 %><br />
+    <%= f.text_field :skill_7 %>
+  </div>
+  <div class="field">
+    <%= f.label :skill_8 %><br />
+    <%= f.text_field :skill_8 %>
+  </div>
+  <div class="field">
+    <%= f.label :skill_9 %><br />
+    <%= f.text_field :skill_9 %>
+  </div>
+  <div class="field">
+    <%= f.label :skill_10 %><br />
+    <%= f.text_field :skill_10 %>
+  </div>
+  <div class="field">
+    <%= f.label :skill_11 %><br />
+    <%= f.text_field :skill_11 %>
+  </div>
+  <div class="field">
+    <%= f.label :skill_12 %><br />
+    <%= f.text_field :skill_12 %>
+  </div>
+  <div class="field">
+    <%= f.label :skill_13 %><br />
+    <%= f.text_field :skill_13 %>
+  </div>
+  <div class="field">
+    <%= f.label :skill_14 %><br />
+    <%= f.text_field :skill_14 %>
+  </div>
+  <div class="field">
+    <%= f.label :skill_15 %><br />
+    <%= f.text_field :skill_15 %>
+  </div>
+  <div class="field">
+    <%= f.label :skill_16 %><br />
+    <%= f.text_field :skill_16 %>
+  </div>
+  <div class="field">
+    <%= f.label :skill_17 %><br />
+    <%= f.text_field :skill_17 %>
+  </div>
+  <div class="field">
+    <%= f.label :skill_18 %><br />
+    <%= f.text_field :skill_18 %>
+  </div>
+  <div class="field">
+    <%= f.label :skill_19 %><br />
+    <%= f.text_field :skill_19 %>
+  </div>
+  <div class="field">
+    <%= f.label :skill_20 %><br />
+    <%= f.text_field :skill_20 %>
+  </div>
+  <div class="field">
+    <%= f.label :skill_21 %><br />
+    <%= f.text_field :skill_21 %>
+  </div>
+  <div class="field">
+    <%= f.label :skill_22 %><br />
+    <%= f.text_field :skill_22 %>
+  </div>
+  <div class="field">
+    <%= f.label :skill_23 %><br />
+    <%= f.text_field :skill_23 %>
+  </div>
+  <div class="field">
+    <%= f.label :skill_24 %><br />
+    <%= f.text_field :skill_24 %>
+  </div>
+  <div class="field">
+    <%= f.label :skill_25 %><br />
+    <%= f.text_field :skill_25 %>
+  </div>
+  <div class="field">
+    <%= f.label :reasoning %><br />
+    <%= f.text_area :reasoning %>
+  </div>
+  <div class="field">
+    <%= f.label :strategy_guide %><br />
+    <%= f.text_field :strategy_guide %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

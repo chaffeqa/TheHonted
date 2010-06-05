@@ -1,0 +1,15 @@
+<p class="notice"><%= notice %></p>
+
+<p>
+  <b>Strategy guide:</b>
+  <%= @hero_pro.strategy_guide %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @hero_pro.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_hero_pro_path(@hero_pro) %> |
+<%= link_to 'Back', hero_pros_path %>

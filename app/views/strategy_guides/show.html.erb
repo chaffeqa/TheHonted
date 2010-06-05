@@ -1,0 +1,20 @@
+<p class="notice"><%= notice %></p>
+
+<p>
+  <b>Hero:</b>
+  <%= @strategy_guide.hero %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @strategy_guide.user %>
+</p>
+
+<p>
+  <b>About this guide:</b>
+  <%= @strategy_guide.about_this_guide %>
+</p>
+
+
+<%= link_to 'Edit', edit_strategy_guide_path(@strategy_guide) %> |
+<%= link_to 'Back', strategy_guides_path %>

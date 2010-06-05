@@ -1,0 +1,28 @@
+<%= form_for(@strategy_guide) do |f| %>
+  <% if @strategy_guide.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@strategy_guide.errors.count, "error") %> prohibited this strategy_guide from being saved:</h2>
+    <ul>
+    <% @strategy_guide.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :hero %><br />
+    <%= f.text_field :hero %>
+  </div>
+  <div class="field">
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </div>
+  <div class="field">
+    <%= f.label :about_this_guide %><br />
+    <%= f.text_area :about_this_guide %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

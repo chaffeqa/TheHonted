@@ -1,0 +1,75 @@
+<h1>Listing skill_builds</h1>
+
+<table>
+  <tr>
+    <th>Skill 1</th>
+    <th>Skill 2</th>
+    <th>Skill 3</th>
+    <th>Skill 4</th>
+    <th>Skill 5</th>
+    <th>Skill 6</th>
+    <th>Skill 7</th>
+    <th>Skill 8</th>
+    <th>Skill 9</th>
+    <th>Skill 10</th>
+    <th>Skill 11</th>
+    <th>Skill 12</th>
+    <th>Skill 13</th>
+    <th>Skill 14</th>
+    <th>Skill 15</th>
+    <th>Skill 16</th>
+    <th>Skill 17</th>
+    <th>Skill 18</th>
+    <th>Skill 19</th>
+    <th>Skill 20</th>
+    <th>Skill 21</th>
+    <th>Skill 22</th>
+    <th>Skill 23</th>
+    <th>Skill 24</th>
+    <th>Skill 25</th>
+    <th>Reasoning</th>
+    <th>Strategy guide</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @skill_builds.each do |skill_build| %>
+  <tr>
+    <td><%= skill_build.skill_1 %></td>
+    <td><%= skill_build.skill_2 %></td>
+    <td><%= skill_build.skill_3 %></td>
+    <td><%= skill_build.skill_4 %></td>
+    <td><%= skill_build.skill_5 %></td>
+    <td><%= skill_build.skill_6 %></td>
+    <td><%= skill_build.skill_7 %></td>
+    <td><%= skill_build.skill_8 %></td>
+    <td><%= skill_build.skill_9 %></td>
+    <td><%= skill_build.skill_10 %></td>
+    <td><%= skill_build.skill_11 %></td>
+    <td><%= skill_build.skill_12 %></td>
+    <td><%= skill_build.skill_13 %></td>
+    <td><%= skill_build.skill_14 %></td>
+    <td><%= skill_build.skill_15 %></td>
+    <td><%= skill_build.skill_16 %></td>
+    <td><%= skill_build.skill_17 %></td>
+    <td><%= skill_build.skill_18 %></td>
+    <td><%= skill_build.skill_19 %></td>
+    <td><%= skill_build.skill_20 %></td>
+    <td><%= skill_build.skill_21 %></td>
+    <td><%= skill_build.skill_22 %></td>
+    <td><%= skill_build.skill_23 %></td>
+    <td><%= skill_build.skill_24 %></td>
+    <td><%= skill_build.skill_25 %></td>
+    <td><%= skill_build.reasoning %></td>
+    <td><%= skill_build.strategy_guide %></td>
+    <td><%= link_to 'Show', skill_build %></td>
+    <td><%= link_to 'Edit', edit_skill_build_path(skill_build) %></td>
+    <td><%= link_to 'Destroy', skill_build, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Skill build', new_skill_build_path %>
