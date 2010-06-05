@@ -1,4 +1,19 @@
 Thehonted::Application.routes.draw do |map|
+  resources :strategy_guides
+
+  resources :hero_cons
+
+  resources :hero_pros
+
+  resources :skill_builds
+
+#  get "users/edit"
+#
+#  get "users/new"
+#
+#  get "users/show"
+
+    
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -12,6 +27,9 @@ Thehonted::Application.routes.draw do |map|
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+  map.resource :account, :controller => "users"
+  map.resources :users
+  map.resource :user_session
 
   # Sample resource route with options:
   #   resources :products do
@@ -49,6 +67,7 @@ Thehonted::Application.routes.draw do |map|
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => "welcome#index"
+  map.root :controller => "user_sessions", :action => "new" # optional, this just sets the root route
 
   # See how all your routes lay out with "rake routes"
 
