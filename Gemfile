@@ -27,4 +27,6 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 
 gem 'railroad'
 
- gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
+gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
+
+gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git', :branch => 'rails3'
