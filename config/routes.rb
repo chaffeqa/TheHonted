@@ -1,4 +1,12 @@
 Thehonted::Application.routes.draw do |map|
+  resources :heros
+
+  resources :remote_video_contents
+
+  resources :remote_image_contents
+
+  resources :text_contents
+
   resources :strategy_guides
 
   resources :hero_cons

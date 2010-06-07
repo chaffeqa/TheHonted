@@ -5,5 +5,7 @@ class StrategyGuide < ActiveRecord::Base
   has_many :hero_pros
   has_many :hero_cons
   has_many :strategy_items
+  accepts_nested_atributes_for :hero_pros
+  accepts_nested_atributes_for :hero_cons
 
 end

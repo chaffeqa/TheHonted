@@ -1,0 +1,25 @@
+<p class="notice"><%= notice %></p>
+
+<p>
+  <b>Video name:</b>
+  <%= @remote_video_content.video_name %>
+</p>
+
+<p>
+  <b>Video type:</b>
+  <%= @remote_video_content.video_type %>
+</p>
+
+<p>
+  <b>Video size:</b>
+  <%= @remote_video_content.video_size %>
+</p>
+
+<p>
+  <b>Video url:</b>
+  <%= @remote_video_content.video_url %>
+</p>
+
+
+<%= link_to 'Edit', edit_remote_video_content_path(@remote_video_content) %> |
+<%= link_to 'Back', remote_video_contents_path %>

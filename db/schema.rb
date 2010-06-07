@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100605170521) do
+ActiveRecord::Schema.define(:version => 20100606120251) do
 
   create_table "hero_cons", :force => true do |t|
     t.integer  "strategy_guide_id"
@@ -21,6 +21,30 @@ ActiveRecord::Schema.define(:version => 20100605170521) do
   create_table "hero_pros", :force => true do |t|
     t.integer  "strategy_guide_id"
     t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "heros", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "remote_image_contents", :force => true do |t|
+    t.string   "image_name"
+    t.string   "image_type"
+    t.integer  "image_size"
+    t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "remote_video_contents", :force => true do |t|
+    t.string   "video_name"
+    t.string   "video_type"
+    t.integer  "video_size"
+    t.string   "video_url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -70,6 +94,12 @@ ActiveRecord::Schema.define(:version => 20100605170521) do
     t.integer  "phase"
     t.integer  "order"
     t.integer  "content_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "text_contents", :force => true do |t|
+    t.text     "text_content"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

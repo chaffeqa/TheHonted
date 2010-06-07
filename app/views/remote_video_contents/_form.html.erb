@@ -1,0 +1,32 @@
+<%= form_for(@remote_video_content) do |f| %>
+  <% if @remote_video_content.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@remote_video_content.errors.count, "error") %> prohibited this remote_video_content from being saved:</h2>
+    <ul>
+    <% @remote_video_content.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :video_name %><br />
+    <%= f.text_field :video_name %>
+  </div>
+  <div class="field">
+    <%= f.label :video_type %><br />
+    <%= f.text_field :video_type %>
+  </div>
+  <div class="field">
+    <%= f.label :video_size %><br />
+    <%= f.text_field :video_size %>
+  </div>
+  <div class="field">
+    <%= f.label :video_url %><br />
+    <%= f.text_field :video_url %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

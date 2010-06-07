@@ -1,0 +1,10 @@
+<p class="notice"><%= notice %></p>
+
+<p>
+  <b>Text content:</b>
+  <%= @text_content.text_content %>
+</p>
+
+
+<%= link_to 'Edit', edit_text_content_path(@text_content) %> |
+<%= link_to 'Back', text_contents_path %>

@@ -1,0 +1,29 @@
+<h1>Listing remote_video_contents</h1>
+
+<table>
+  <tr>
+    <th>Video name</th>
+    <th>Video type</th>
+    <th>Video size</th>
+    <th>Video url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @remote_video_contents.each do |remote_video_content| %>
+  <tr>
+    <td><%= remote_video_content.video_name %></td>
+    <td><%= remote_video_content.video_type %></td>
+    <td><%= remote_video_content.video_size %></td>
+    <td><%= remote_video_content.video_url %></td>
+    <td><%= link_to 'Show', remote_video_content %></td>
+    <td><%= link_to 'Edit', edit_remote_video_content_path(remote_video_content) %></td>
+    <td><%= link_to 'Destroy', remote_video_content, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Remote video content', new_remote_video_content_path %>

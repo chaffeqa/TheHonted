@@ -1,0 +1,32 @@
+<%= form_for(@remote_image_content) do |f| %>
+  <% if @remote_image_content.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@remote_image_content.errors.count, "error") %> prohibited this remote_image_content from being saved:</h2>
+    <ul>
+    <% @remote_image_content.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :image_name %><br />
+    <%= f.text_field :image_name %>
+  </div>
+  <div class="field">
+    <%= f.label :image_type %><br />
+    <%= f.text_field :image_type %>
+  </div>
+  <div class="field">
+    <%= f.label :image_size %><br />
+    <%= f.text_field :image_size %>
+  </div>
+  <div class="field">
+    <%= f.label :image_url %><br />
+    <%= f.text_field :image_url %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
+
+# Heroes
+Hero.create([
+    {:name => 'Night Hound'},
+    {:name => 'Swiftblade'},
+    {:name => 'Moon Queen'},
+    {:name => 'Wildsoul'}
+  ])

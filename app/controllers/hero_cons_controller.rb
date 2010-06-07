@@ -35,16 +35,18 @@ class HeroConsController < ApplicationController
   # GET /hero_cons/1/edit
   def edit
     @hero_con = HeroCon.find(params[:id])
+    
   end
 
   # POST /hero_cons
   # POST /hero_cons.xml
   def create
     @hero_con = HeroCon.new(params[:hero_con])
+    @hero_con.strategy_guide_id = @strategy_guide unless @strategy_guide.nil?
 
     respond_to do |format|
       if @hero_con.save
-        format.html { redirect_to(@hero_con, :notice => 'Hero con was successfully created.') }
+        format.html { redirect_to(@strategy_guide, :notice => 'Hero con was successfully created.') }
         format.xml  { render :xml => @hero_con, :status => :created, :location => @hero_con }
       else
         format.html { render :action => "new" }

@@ -1,13 +1,13 @@
 class StrategyGuidesController < ApplicationController
+
+  respond_to :html, :xml, :json
+  
   # GET /strategy_guides
   # GET /strategy_guides.xml
   def index
     @strategy_guides = StrategyGuide.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @strategy_guides }
-    end
+    
+    respond_with(@strategy_guides)
   end
 
   # GET /strategy_guides/1
@@ -15,32 +15,34 @@ class StrategyGuidesController < ApplicationController
   def show
     @strategy_guide = StrategyGuide.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @strategy_guide }
+    respond_with(@strategy_guide)
     end
   end
 
   # GET /strategy_guides/new
   # GET /strategy_guides/new.xml
   def new
-    @strategy_guide = StrategyGuide.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @strategy_guide }
-    end
+    @strategy_guide = StrategyGuide.new(params[:strategy_guide])
+    @heroes = Hero.ordered.map  { |hero| [hero.name, hero.id]  }
+    @hero_pros = @strategy_guide.hero_pros
+    @hero_cons = @strategy_guide.hero_cons
+    
+    respond_with(@strategy_guide)
   end
 
   # GET /strategy_guides/1/edit
   def edit
     @strategy_guide = StrategyGuide.find(params[:id])
+    @heroes = Hero.ordered.map { |hero| [hero.name, hero.id]  }
+    @hero_pros = @strategy_guide.hero_pros
+    @hero_cons = @strategy_guide.hero_cons
   end
 
   # POST /strategy_guides
   # POST /strategy_guides.xml
   def create
     @strategy_guide = StrategyGuide.new(params[:strategy_guide])
+    @strategy_guide.user = current_user
 
     respond_to do |format|
       if @strategy_guide.save
@@ -57,6 +59,7 @@ class StrategyGuidesController < ApplicationController
   # PUT /strategy_guides/1.xml
   def update
     @strategy_guide = StrategyGuide.find(params[:id])
+    @strategy_guide.user = current_user
 
     respond_to do |format|
       if @strategy_guide.update_attributes(params[:strategy_guide])
