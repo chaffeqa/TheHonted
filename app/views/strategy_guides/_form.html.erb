@@ -15,23 +15,25 @@
     <%= f.select :hero_id, @heroes, {:include_blank => 'Choose a Hero...'}  %>
   </div>
 
-
+<h3>Hero Pros and Cons</h3>
   <div class="field">
-    <% f.fields_for :hero_cons, @hero_cons do |cons_fields| %>
-      <% if @hero_con.errors.any? %>
-        <div id="errorExplanation">
-          <h2><%= pluralize(@hero_con.errors.count, "error") %> prohibited this hero_con from being saved:</h2>
-          <ul>
-            <% @hero_con.errors.full_messages.each do |msg| %>
-              <li><%= msg %></li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
+    <% f.fields_for :hero_cons do |cons_fields| %>
 
       <div class="field">
-        <%= cons_fields.label :description %><br />
-        <%= cons_fields.text_field :description %>
+        <%= cons_fields.label :description, "Hero Con:" %><br />
+        <%= cons_fields.text_field :description, :size => "100" %> &nbsp; Delete?
+        <%= cons_fields.check_box :_destroy %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <% f.fields_for :hero_pros do |pros_fields| %>
+
+      <div class="field">
+        <%= pros_fields.label :description, "Hero Pro:" %><br />
+        <%= pros_fields.text_field :description, :size => "100" %> &nbsp; Delete?
+        <%= pros_fields.check_box :_destroy %>
       </div>
     <% end %>
   </div>

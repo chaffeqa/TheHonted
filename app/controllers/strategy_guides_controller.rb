@@ -16,7 +16,6 @@ class StrategyGuidesController < ApplicationController
     @strategy_guide = StrategyGuide.find(params[:id])
 
     respond_with(@strategy_guide)
-    end
   end
 
   # GET /strategy_guides/new
@@ -24,8 +23,8 @@ class StrategyGuidesController < ApplicationController
   def new
     @strategy_guide = StrategyGuide.new(params[:strategy_guide])
     @heroes = Hero.ordered.map  { |hero| [hero.name, hero.id]  }
-    @hero_pros = @strategy_guide.hero_pros
-    @hero_cons = @strategy_guide.hero_cons
+    @strategy_guide.hero_cons.build
+    @strategy_guide.hero_pros.build
     
     respond_with(@strategy_guide)
   end
