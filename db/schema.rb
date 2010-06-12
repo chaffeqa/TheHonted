@@ -94,6 +94,7 @@ ActiveRecord::Schema.define(:version => 20100606120251) do
     t.integer  "phase"
     t.integer  "order"
     t.integer  "content_id"
+    t.string   "content_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

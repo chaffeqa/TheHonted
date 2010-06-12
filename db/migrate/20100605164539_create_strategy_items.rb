@@ -4,7 +4,7 @@ class CreateStrategyItems < ActiveRecord::Migration
       t.belongs_to :strategy_guide
       t.integer :phase
       t.integer :order
-      t.references :content
+      t.references :content, :polymorphic => true
 
       t.timestamps
     end
