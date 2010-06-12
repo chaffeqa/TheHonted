@@ -1,5 +1,6 @@
 class StrategyGuidesController < ApplicationController
 
+  before_filter :require_user, :only => [:new, :edit, :destroy]
   respond_to :html, :xml, :json
   
   # GET /strategy_guides
@@ -23,8 +24,6 @@ class StrategyGuidesController < ApplicationController
   def new
     @strategy_guide = StrategyGuide.new(params[:strategy_guide])
     @heroes = Hero.ordered.map  { |hero| [hero.name, hero.id]  }
-    @strategy_guide.hero_cons.build
-    @strategy_guide.hero_pros.build
     
     respond_with(@strategy_guide)
   end
@@ -82,4 +81,11 @@ class StrategyGuidesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+
+  ###############################################################################
+  # AJAX Calls
+  ###############################################################################
+
+
 end

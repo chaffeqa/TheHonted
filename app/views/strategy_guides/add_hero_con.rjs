@@ -1,0 +1,1 @@
+page.insert_html :after, "con_1", :partial => 'hero_cons_form' 

@@ -1,0 +1,8 @@
+<div class="field">
+  <%= f.text_field :description, :size => "100" %> &nbsp;
+  <% unless f.object.new_record? %>
+    Delete? <%= f.check_box :_destroy %>
+  <% else %>
+    <%= link_to_function "Remove", "$(this).up('.field').remove()" %>
+  <% end %>
+</div>

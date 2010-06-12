@@ -1,25 +1,25 @@
 Thehonted::Application.routes.draw do |map|
-  resources :heros
+  #resources :heros
 
-  resources :remote_video_contents
+  #resources :remote_video_contents
 
-  resources :remote_image_contents
+  #resources :remote_image_contents
 
-  resources :text_contents
+  #resources :text_contents
 
-  resources :strategy_guides
+  resources :strategy_guides 
 
   resources :hero_cons
 
   resources :hero_pros
 
-  resources :skill_builds
+  #resources :skill_builds
 
-#  get "users/edit"
-#
-#  get "users/new"
-#
-#  get "users/show"
+  #  get "users/edit"
+  #
+  #  get "users/new"
+  #
+  #  get "users/show" 
 
     
   # The priority is based upon order of creation:
@@ -81,5 +81,5 @@ Thehonted::Application.routes.draw do |map|
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id(.:format)))'
+  #match ':controller(/:action(/:id(.:format)))'
 end
