@@ -15,8 +15,6 @@ class StrategyGuidesController < ApplicationController
   # GET /strategy_guides/1.xml
   def show
     @strategy_guide = StrategyGuide.find(params[:id])
-
-    respond_with(@strategy_guide)
   end
 
   # GET /strategy_guides/new
@@ -24,8 +22,6 @@ class StrategyGuidesController < ApplicationController
   def new
     @strategy_guide = StrategyGuide.new(params[:strategy_guide])
     @heroes = Hero.ordered.map  { |hero| [hero.name, hero.id]  }
-    
-    respond_with(@strategy_guide)
   end
 
   # GET /strategy_guides/1/edit
@@ -42,32 +38,34 @@ class StrategyGuidesController < ApplicationController
     @strategy_guide = StrategyGuide.new(params[:strategy_guide])
     @strategy_guide.user = current_user
 
-    respond_to do |format|
-      if @strategy_guide.save
-        format.html { redirect_to(@strategy_guide, :notice => 'Strategy guide was successfully created.') }
-        format.xml  { render :xml => @strategy_guide, :status => :created, :location => @strategy_guide }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @strategy_guide.errors, :status => :unprocessable_entity }
-      end
+    if @strategy_guide.save
+      redirect_to(new_strategy_guide_skill_build_path(@strategy_guide.id))
+    else
+      render :action => "new"
     end
+    
   end
+
 
   # PUT /strategy_guides/1
   # PUT /strategy_guides/1.xml
   def update
     @strategy_guide = StrategyGuide.find(params[:id])
     @strategy_guide.user = current_user
-
-    respond_to do |format|
-      if @strategy_guide.update_attributes(params[:strategy_guide])
-        format.html { redirect_to(@strategy_guide, :notice => 'Strategy guide was successfully updated.') }
-        format.xml  { head :ok }
+   
+    if @strategy_guide.update_attributes(params[:strategy_guide])
+      if @strategy_guide.skill_build.nil?
+        redirect_to(new_strategy_guide_skill_build_path(@strategy_guide.id))
       else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @strategy_guide.errors, :status => :unprocessable_entity }
+        redirect_to(edit_strategy_guide_skill_build_path(@strategy_guide.id, @strategy_guide.skill_build.id))
       end
+    else
+      @heroes = Hero.ordered.map { |hero| [hero.name, hero.id]  }
+      @hero_pros = @strategy_guide.hero_pros
+      @hero_cons = @strategy_guide.hero_cons
+      render :action => "edit"
     end
+   
   end
 
   # DELETE /strategy_guides/1
@@ -76,11 +74,19 @@ class StrategyGuidesController < ApplicationController
     @strategy_guide = StrategyGuide.find(params[:id])
     @strategy_guide.destroy
 
-    respond_to do |format|
-      format.html { redirect_to(strategy_guides_url) }
-      format.xml  { head :ok }
-    end
+    redirect_to(strategy_guides_url)
   end
+
+
+  def strategy_items
+    @strategy_guide = StrategyGuide.find(params[:id])
+    @strategy_items = @strategy_guide.strategy_items
+    @text_content = TextContent.new
+    @remote_image_content = RemoteImageContent.new
+    @remote_video_content = RemoteVideoContent.new
+  end
+
+
 
 
   ###############################################################################

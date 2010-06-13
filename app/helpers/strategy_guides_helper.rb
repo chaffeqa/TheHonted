@@ -6,7 +6,12 @@ module StrategyGuidesHelper
       sg.hero_cons.build if sg.hero_cons.empty?
     end
   end
-
+  
+  def get_strategy_item_partial(strategy_item)
+    return "text_contents/item"  if strategy_item.content_type == "TextContent"
+    return "remote_image_contents/item"  if strategy_item.content_type == "RemoteImageContent"
+    return "remote_video_contents/item"  if strategy_item.content_type == "RemoteVideoContent"
+  end
 
 
   #

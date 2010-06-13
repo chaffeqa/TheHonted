@@ -1,0 +1,19 @@
+<h1>Strategy Guide Items</h1>
+<% @strategy_items.each do |strategy_item| %>
+  <%= render get_strategy_item_partial(strategy_item), :locals => {:item => strategy_item } %>
+<% end %>
+
+<%= link_to_function "Add Text Content", "showDiv('text-content')"  %> ---
+<%= link_to_function "Add Image Content", "showDiv('remote-image-content')"  %> ---
+<%= link_to_function "Add Video Content", "showDiv('remote-video-content')"  %>
+
+<div>
+  <div id="text-content" style="display:none;"><%= render "text_contents/form" %>
+    <%= link_to_function "Cancel", "hideDiv('text-content')" %></div>
+  <div id="remote-image-content" style="display:none;"><%= render "remote_image_contents/form" %>
+    <%= link_to_function "Cancel", "hideDiv('remote-image-content')" %></div>
+  <div id="remote-video-content" style="display:none;"><%= render "remote_video_contents/form" %>
+    <%= link_to_function "Cancel", "hideDiv('remote-video-content')" %></div>
+</div>
+
+<%= link_to 'Back', edit_strategy_guide_skill_build_path(@strategy_guide.id) %>

@@ -1,0 +1,19 @@
+<fieldset>
+  <legend>Video Item</legend>
+  <% video = locals[:item].content
+  if video.video_embedded %>
+    <%=raw video.video_embedded %>
+  <% else %>
+    <video src="<%= video.video_url %>"
+           controls="controls"
+           <% if video.video_type %>
+             type="<%= video.video_type %>"
+           <% end %>
+           <% if video.video_alt_url %>
+             type="<%= video.video_alt_url %>"
+           <% end %>
+           >
+      Your browser does not support the video tag
+    </video>
+  <% end %>
+</fieldset>

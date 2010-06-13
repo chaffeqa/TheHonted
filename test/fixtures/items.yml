@@ -1,0 +1,67 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  description: MyText
+  image_path: MyString
+  str: MyString
+  agi: MyString
+  int: MyString
+  armor: MyString
+  max_mana: MyString
+  max_health: MyString
+  mana_regen: MyString
+  damage: MyString
+  attack_speed: MyString
+  movement_speed: MyString
+  magic_armor: MyString
+  lifesteal: MyString
+  block: MyString
+  evasion: MyString
+  critical_strike: MyString
+  on_attack: MyString
+  on_attack_effect: MyText
+  aura_name: MyString
+  aura_radius: 1
+  aura_type: MyString
+  aura_effects: MyText
+  activation_description: MyText
+  activation_target: MyString
+  activation_range: MyString
+  activation_mana_cost: MyString
+  activation_cooldown: MyString
+  activation_effects: MyText
+  value: 1
+
+two:
+  name: MyString
+  description: MyText
+  image_path: MyString
+  str: MyString
+  agi: MyString
+  int: MyString
+  armor: MyString
+  max_mana: MyString
+  max_health: MyString
+  mana_regen: MyString
+  damage: MyString
+  attack_speed: MyString
+  movement_speed: MyString
+  magic_armor: MyString
+  lifesteal: MyString
+  block: MyString
+  evasion: MyString
+  critical_strike: MyString
+  on_attack: MyString
+  on_attack_effect: MyText
+  aura_name: MyString
+  aura_radius: 1
+  aura_type: MyString
+  aura_effects: MyText
+  activation_description: MyText
+  activation_target: MyString
+  activation_range: MyString
+  activation_mana_cost: MyString
+  activation_cooldown: MyString
+  activation_effects: MyText
+  value: 1

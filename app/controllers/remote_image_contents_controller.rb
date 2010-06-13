@@ -1,4 +1,10 @@
 class RemoteImageContentsController < ApplicationController
+  before_filter :get_strategy_guide
+
+  def get_strategy_guide
+    @strategy_guide = StrategyGuide.find(params[:strategy_guide_id])
+  end
+
   # GET /remote_image_contents
   # GET /remote_image_contents.xml
   def index
@@ -41,15 +47,14 @@ class RemoteImageContentsController < ApplicationController
   # POST /remote_image_contents.xml
   def create
     @remote_image_content = RemoteImageContent.new(params[:remote_image_content])
+    order_num = @strategy_guide.strategy_items.size || 0
+    @strategy_item = @strategy_guide.strategy_items.build(:order => order_num, :phase => 0)
 
-    respond_to do |format|
-      if @remote_image_content.save
-        format.html { redirect_to(@remote_image_content, :notice => 'Remote image content was successfully created.') }
-        format.xml  { render :xml => @remote_image_content, :status => :created, :location => @remote_image_content }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @remote_image_content.errors, :status => :unprocessable_entity }
-      end
+    if @remote_image_content.save and @strategy_item.content = @remote_image_content and @strategy_item.save
+      redirect_to(strategy_items_strategy_guide_path(@strategy_guide))
+    else
+      @strategy_items = @strategy_guide.strategy_items
+      render :action => "strategy_guides/strategy_items"
     end
   end
 
@@ -58,14 +63,11 @@ class RemoteImageContentsController < ApplicationController
   def update
     @remote_image_content = RemoteImageContent.find(params[:id])
 
-    respond_to do |format|
-      if @remote_image_content.update_attributes(params[:remote_image_content])
-        format.html { redirect_to(@remote_image_content, :notice => 'Remote image content was successfully updated.') }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @remote_image_content.errors, :status => :unprocessable_entity }
-      end
+    if @remote_image_content.update_attributes(params[:remote_image_content])
+      redirect_to(strategy_items_strategy_guide_path(@strategy_guide))
+    else
+      @strategy_items = @strategy_guide.strategy_items
+      render :action => "strategy_guides/strategy_items"
     end
   end
 

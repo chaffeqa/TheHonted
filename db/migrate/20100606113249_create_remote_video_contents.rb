@@ -3,8 +3,9 @@ class CreateRemoteVideoContents < ActiveRecord::Migration
     create_table :remote_video_contents do |t|
       t.string :video_name
       t.string :video_type
-      t.integer :video_size
       t.string :video_url
+      t.string :video_alt_url
+      t.string :video_embedded
 
       t.timestamps
     end

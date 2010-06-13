@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100606120251) do
+ActiveRecord::Schema.define(:version => 20100613192305) do
 
   create_table "hero_cons", :force => true do |t|
     t.integer  "strategy_guide_id"
@@ -27,6 +27,55 @@ ActiveRecord::Schema.define(:version => 20100606120251) do
 
   create_table "heros", :force => true do |t|
     t.string   "name"
+    t.text     "description"
+    t.string   "image_path"
+    t.integer  "attack_range"
+    t.string   "damage_range"
+    t.decimal  "attacks_per_second"
+    t.integer  "movement_speed"
+    t.decimal  "str_base"
+    t.decimal  "agi_base"
+    t.decimal  "int_base"
+    t.decimal  "str_gain"
+    t.decimal  "agi_gain"
+    t.decimal  "int_gain"
+    t.decimal  "armor"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "items", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "image_path"
+    t.string   "str"
+    t.string   "agi"
+    t.string   "int"
+    t.string   "armor"
+    t.string   "max_mana"
+    t.string   "max_health"
+    t.string   "mana_regen"
+    t.string   "damage"
+    t.string   "attack_speed"
+    t.string   "movement_speed"
+    t.string   "magic_armor"
+    t.string   "lifesteal"
+    t.string   "block"
+    t.string   "evasion"
+    t.string   "critical_strike"
+    t.string   "on_attack"
+    t.text     "on_attack_effect"
+    t.string   "aura_name"
+    t.integer  "aura_radius"
+    t.string   "aura_type"
+    t.text     "aura_effects"
+    t.text     "activation_description"
+    t.string   "activation_target"
+    t.string   "activation_range"
+    t.string   "activation_mana_cost"
+    t.string   "activation_cooldown"
+    t.text     "activation_effects"
+    t.integer  "value"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -43,8 +92,9 @@ ActiveRecord::Schema.define(:version => 20100606120251) do
   create_table "remote_video_contents", :force => true do |t|
     t.string   "video_name"
     t.string   "video_type"
-    t.integer  "video_size"
     t.string   "video_url"
+    t.string   "video_alt_url"
+    t.string   "video_embedded"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -77,6 +127,27 @@ ActiveRecord::Schema.define(:version => 20100606120251) do
     t.string   "skill_25"
     t.text     "reasoning"
     t.integer  "strategy_guide_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "skills", :force => true do |t|
+    t.integer  "hero_id"
+    t.string   "name"
+    t.text     "description"
+    t.string   "image_path"
+    t.string   "action"
+    t.string   "target"
+    t.string   "damage_type"
+    t.string   "range"
+    t.string   "radius"
+    t.string   "cast_time"
+    t.string   "mana_cost"
+    t.string   "cooldown"
+    t.text     "activation"
+    t.text     "on_attack"
+    t.text     "effects"
+    t.string   "staff_effect"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

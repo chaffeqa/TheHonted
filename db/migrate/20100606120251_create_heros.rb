@@ -2,6 +2,19 @@ class CreateHeros < ActiveRecord::Migration
   def self.up
     create_table :heros do |t|
       t.string :name
+      t.text :description
+      t.string :image_path
+      t.integer :attack_range
+      t.string :damage_range
+      t.decimal :attacks_per_second
+      t.integer :movement_speed
+      t.decimal :str_base
+      t.decimal :agi_base
+      t.decimal :int_base
+      t.decimal :str_gain
+      t.decimal :agi_gain
+      t.decimal :int_gain
+      t.decimal :armor
 
       t.timestamps
     end

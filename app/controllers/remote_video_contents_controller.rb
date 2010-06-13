@@ -1,4 +1,10 @@
 class RemoteVideoContentsController < ApplicationController
+  before_filter :get_strategy_guide
+
+  def get_strategy_guide
+    @strategy_guide = StrategyGuide.find(params[:strategy_guide_id])
+  end
+
   # GET /remote_video_contents
   # GET /remote_video_contents.xml
   def index
@@ -41,15 +47,14 @@ class RemoteVideoContentsController < ApplicationController
   # POST /remote_video_contents.xml
   def create
     @remote_video_content = RemoteVideoContent.new(params[:remote_video_content])
+    order_num = @strategy_guide.strategy_items.size || 0
+    @strategy_item = @strategy_guide.strategy_items.build(:order => order_num, :phase => 0)
 
-    respond_to do |format|
-      if @remote_video_content.save
-        format.html { redirect_to(@remote_video_content, :notice => 'Remote video content was successfully created.') }
-        format.xml  { render :xml => @remote_video_content, :status => :created, :location => @remote_video_content }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @remote_video_content.errors, :status => :unprocessable_entity }
-      end
+    if @remote_video_content.save and @strategy_item.content = @remote_video_content and @strategy_item.save
+      redirect_to(strategy_items_strategy_guide_path(@strategy_guide))
+    else
+      @strategy_items = @strategy_guide.strategy_items
+      render :action => "strategy_guides/strategy_items"
     end
   end
 
@@ -58,14 +63,11 @@ class RemoteVideoContentsController < ApplicationController
   def update
     @remote_video_content = RemoteVideoContent.find(params[:id])
 
-    respond_to do |format|
-      if @remote_video_content.update_attributes(params[:remote_video_content])
-        format.html { redirect_to(@remote_video_content, :notice => 'Remote video content was successfully updated.') }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @remote_video_content.errors, :status => :unprocessable_entity }
-      end
+    if @remote_video_content.update_attributes(params[:remote_video_content])
+      redirect_to(strategy_items_strategy_guide_path(@strategy_guide))
+    else
+      @strategy_items = @strategy_guide.strategy_items
+      render :action => "strategy_guides/strategy_items"
     end
   end
 

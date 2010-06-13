@@ -1,4 +1,10 @@
 class SkillBuildsController < ApplicationController
+  before_filter :get_strategy_guide
+
+  def get_strategy_guide
+    @strategy_guide = StrategyGuide.find(params[:strategy_guide_id])
+  end
+
   # GET /skill_builds
   # GET /skill_builds.xml
   def index
@@ -24,7 +30,7 @@ class SkillBuildsController < ApplicationController
   # GET /skill_builds/new
   # GET /skill_builds/new.xml
   def new
-    @skill_build = SkillBuild.new
+    @skill_build = @strategy_guide.build_skill_build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,17 +40,17 @@ class SkillBuildsController < ApplicationController
 
   # GET /skill_builds/1/edit
   def edit
-    @skill_build = SkillBuild.find(params[:id])
+    @skill_build = @strategy_guide.skill_build
   end
 
   # POST /skill_builds
   # POST /skill_builds.xml
   def create
-    @skill_build = SkillBuild.new(params[:skill_build])
+    @skill_build = @strategy_guide.build_skill_build(params[:skill_build])
 
     respond_to do |format|
       if @skill_build.save
-        format.html { redirect_to(@skill_build, :notice => 'Skill build was successfully created.') }
+        format.html { redirect_to(strategy_items_strategy_guide_path(@strategy_guide)) }
         format.xml  { render :xml => @skill_build, :status => :created, :location => @skill_build }
       else
         format.html { render :action => "new" }
@@ -56,11 +62,11 @@ class SkillBuildsController < ApplicationController
   # PUT /skill_builds/1
   # PUT /skill_builds/1.xml
   def update
-    @skill_build = SkillBuild.find(params[:id])
+    @skill_build = @strategy_guide.skill_build
 
     respond_to do |format|
       if @skill_build.update_attributes(params[:skill_build])
-        format.html { redirect_to(@skill_build, :notice => 'Skill build was successfully updated.') }
+        format.html { redirect_to(strategy_items_strategy_guide_path(@strategy_guide)) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

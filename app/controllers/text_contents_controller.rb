@@ -1,4 +1,10 @@
 class TextContentsController < ApplicationController
+  before_filter :get_strategy_guide
+
+  def get_strategy_guide
+    @strategy_guide = StrategyGuide.find(params[:strategy_guide_id])
+  end
+
   # GET /text_contents
   # GET /text_contents.xml
   def index
@@ -41,15 +47,14 @@ class TextContentsController < ApplicationController
   # POST /text_contents.xml
   def create
     @text_content = TextContent.new(params[:text_content])
-
-    respond_to do |format|
-      if @text_content.save
-        format.html { redirect_to(@text_content, :notice => 'Text content was successfully created.') }
-        format.xml  { render :xml => @text_content, :status => :created, :location => @text_content }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @text_content.errors, :status => :unprocessable_entity }
-      end
+    order_num = @strategy_guide.strategy_items.size || 0
+    @strategy_item = @strategy_guide.strategy_items.build(:order => order_num, :phase => 0)
+    
+    if @text_content.save and @strategy_item.content = @text_content and @strategy_item.save
+      redirect_to(strategy_items_strategy_guide_path(@strategy_guide))
+    else
+      @strategy_items = @strategy_guide.strategy_items
+      render :action => "strategy_guides/strategy_items"
     end
   end
 
@@ -58,14 +63,11 @@ class TextContentsController < ApplicationController
   def update
     @text_content = TextContent.find(params[:id])
 
-    respond_to do |format|
-      if @text_content.update_attributes(params[:text_content])
-        format.html { redirect_to(@text_content, :notice => 'Text content was successfully updated.') }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @text_content.errors, :status => :unprocessable_entity }
-      end
+    if @text_content.update_attributes(params[:text_content])
+      redirect_to(strategy_items_strategy_guide_path(@strategy_guide))
+    else
+      @strategy_items = @strategy_guide.strategy_items
+      render :action => "strategy_guides/strategy_items"
     end
   end
 

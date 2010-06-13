@@ -1,17 +1,23 @@
 Thehonted::Application.routes.draw do |map|
   #resources :heros
 
-  #resources :remote_video_contents
+#  resources :remote_video_contents
 
-  #resources :remote_image_contents
+#  resources :remote_image_contents
 
-  #resources :text_contents
+#  resources :text_contents
 
-  resources :strategy_guides 
+  resources :strategy_guides do
+      get :strategy_items, :on => :member
+      resources :text_contents, :only => [:create, :update]
+      resources :remote_image_contents, :only => [:create, :update]
+      resources :remote_video_contents, :only => [:create, :update]
+      resources :skill_builds, :only => [:new, :create, :edit, :update]
+  end
 
-  resources :hero_cons
+  #resources :hero_cons
 
-  resources :hero_pros
+  #resources :hero_pros
 
   #resources :skill_builds
 
@@ -75,7 +81,7 @@ Thehonted::Application.routes.draw do |map|
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => "welcome#index"
-  map.root :controller => "user_sessions", :action => "new" # optional, this just sets the root route
+  root :to => "strategy_guide#index"
 
   # See how all your routes lay out with "rake routes"
 

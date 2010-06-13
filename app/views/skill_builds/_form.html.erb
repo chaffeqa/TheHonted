@@ -1,4 +1,4 @@
-<%= form_for(@skill_build) do |f| %>
+<%= form_for([@strategy_guide, @skill_build]) do |f| %>
   <% if @skill_build.errors.any? %>
   <div id="errorExplanation">
     <h2><%= pluralize(@skill_build.errors.count, "error") %> prohibited this skill_build from being saved:</h2>
@@ -113,10 +113,6 @@
   <div class="field">
     <%= f.label :reasoning %><br />
     <%= f.text_area :reasoning %>
-  </div>
-  <div class="field">
-    <%= f.label :strategy_guide %><br />
-    <%= f.text_field :strategy_guide %>
   </div>
   <div class="actions">
     <%= f.submit %>
