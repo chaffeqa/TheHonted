@@ -84,3 +84,118 @@ nighthound.create_skill_4({
   :image_path => 'images/skills/invisibility.jpg'
 })
 nighthound.save
+
+
+moon_queen = Hero.create( {
+    :name => 'Moon Queen',
+    :description => '
+The insectoid Moon Warriors never entered into the great war between Man and Beast, but when the Hellbourne threatened Newerth, their very queen emerged to lead her people against the daemons. With powers drawn from the moon and from the shared will of her hive, this strange creature is a mighty boon for the Legion.',
+    :image_path => 'images/heroes/moon_queen.jpg'
+  })
+moon_queen.create_skill_1({
+  :name => 'Moon Beam',
+  :description => 'The Moon Queen calls upon the power of the moon to strike a target foe, damaging and briefly stunning them.',
+  :image_path => 'images/skills/moon_beam.jpg'
+})
+moon_queen.create_skill_2({
+  :name => 'Multi-Strike',
+  :description => 'The Moon Queens skill with her Luna Shuriken allows her to bounce it from her primary target to hit additional foes.',
+  :image_path => 'images/skills/multi-strike.jpg'
+})
+moon_queen.create_skill_3({
+  :name => 'Lunar Glow',
+  :description => 'The Moon Queen radiates the power of the moon to allies around her, increasing the damage they deal with ranged attacks.',
+  :image_path => 'images/skills/lunar_glow.jpg'
+})
+moon_queen.create_skill_4({
+  :name => 'Moon Finale',
+  :description => 'The Moon Queen casts her Moon Beam spell repeatedly for a short duration on random nearby enemies.',
+  :image_path => 'images/skills/moon_finale.jpg'
+})
+moon_queen.save
+
+
+wildsoul = Hero.create( {
+    :name => 'Wildsoul',
+    :description => '
+Is the mighty Wildsoul a Beast who dreamed himself a Man, or a Man who dreamed himself a Beast? As much a bear as a human, this druidic warrior draws upon primordial woodland energies to strengthen himself and crush those who threaten the natural life of Newerth.',
+    :image_path => 'images/heroes/wildsoul.jpg'
+  })
+wildsoul.create_skill_1({
+  :name => 'Beardulon',
+  :description => 'Wildsoul summons his pet bear, Beardulon',
+  :image_path => 'images/skills/beardulon.jpg'
+})
+wildsoul.create_skill_2({
+  :name => 'Wild',
+  :description => 'Wildsoul drives both himself and Beardulon Wild, increasing attack speed and movement speed.',
+  :image_path => 'images/skills/wild.jpg'
+})
+wildsoul.create_skill_3({
+  :name => 'Natural Attunement',
+  :description => 'Wildsoul attunes himself further to the needs of Nature, adding to the power of his other abilities.',
+  :image_path => 'images/skills/natural_attunement.jpg'
+})
+wildsoul.create_skill_4({
+  :name => 'Bear Form',
+  :description => 'Wildsoul takes the form of a bear causing him to switch to melee based attacks, have a faster attack time, gain more armor and health, yet moves slower.',
+  :image_path => 'images/skills/bear_form.jpg'
+})
+wildsoul.save
+
+
+
+zephyr = Hero.create( {
+    :name => 'Zephyr',
+    :description => 'A riddler, a sage, and a lover of sweets, Zephyr sadly is known in these times simply as a warrior of the winds. Though he chose not to participate in the Beast Hordes war with the humans, he has joined battle against the Hellbourne, and the powerful winds and aerial attacks he calls down upon the daemons are a welcome addition to the new Legion.',
+    :image_path => 'images/heroes/zephyr.jpg'
+  })
+zephyr.create_skill_1({
+  :name => 'Gust',
+  :description => 'Zephyr summons a gust of wind in the direction of his choosing, pushing, stunning, and dealing damage to enemies it hits.',
+  :image_path => 'images/skills/gust.jpg'
+})
+zephyr.create_skill_2({
+  :name => 'Cyclones',
+  :description => 'Zephyr spawns a small cyclone on every kill he makes. Spawned cyclones automatically patrol around Zephyr and damage enemies they touch. Zephyr can, on command, consume a cyclone to heal himself.',
+  :image_path => 'images/skills/cyclones.jpg'
+})
+zephyr.create_skill_3({
+  :name => 'Wind Shield',
+  :description => 'Zephyr uses his control of the wind to create a protective barrier around himself, increasing his evasion and speeding him up. The barrier also has a chance to redirect incoming projectile based attacks back at the attacker.',
+  :image_path => 'images/skills/wind_shield.jpg'
+})
+zephyr.create_skill_4({
+  :name => 'Typhoon',
+  :description => 'Zephyr creates a mighty Typhoon, slowing movement speed and dealing damage to any units near it. The closer an enemy is to the center of the Typhoon, the higher the damage and speed reduction becomes.',
+  :image_path => 'images/skills/typhoon.jpg'
+})
+zephyr.save
+
+
+zephyr = Hero.create( {
+    :name => 'Zephyr',
+    :description => '',
+    :image_path => 'images/heroes/.jpg'
+  })
+zephyr.create_skill_1({
+  :name => '',
+  :description => '',
+  :image_path => 'images/skills/.jpg'
+})
+zephyr.create_skill_2({
+  :name => '',
+  :description => '',
+  :image_path => 'images/skills/.jpg'
+})
+zephyr.create_skill_3({
+  :name => '',
+  :description => '',
+  :image_path => 'images/skills/.jpg'
+})
+zephyr.create_skill_4({
+  :name => '',
+  :description => '',
+  :image_path => 'images/skills/.jpg'
+})
+zephyr.save

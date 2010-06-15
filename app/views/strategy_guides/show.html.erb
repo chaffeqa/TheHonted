@@ -14,7 +14,9 @@
 
 <%= render 'skill_builds/skill_build' %>
 
-
+<% @strategy_items.each do |strategy_item| %>
+  <%= render get_strategy_item_partial(strategy_item), :locals => {:item => strategy_item } %>
+<% end %>
 
 
 <%= link_to 'Edit', edit_strategy_guide_path(@strategy_guide) %> |

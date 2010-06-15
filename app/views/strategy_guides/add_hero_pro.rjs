@@ -1,1 +1,0 @@
-page.replace_html "hero_pros_field", :partial => 'hero_pros_form', :locals => {:hero_pros => @hero_pros}
