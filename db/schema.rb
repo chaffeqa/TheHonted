@@ -29,6 +29,10 @@ ActiveRecord::Schema.define(:version => 20100613192305) do
     t.string   "name"
     t.text     "description"
     t.string   "image_path"
+    t.integer  "skill_1_id"
+    t.integer  "skill_2_id"
+    t.integer  "skill_3_id"
+    t.integer  "skill_4_id"
     t.integer  "attack_range"
     t.string   "damage_range"
     t.decimal  "attacks_per_second"
@@ -132,7 +136,6 @@ ActiveRecord::Schema.define(:version => 20100613192305) do
   end
 
   create_table "skills", :force => true do |t|
-    t.integer  "hero_id"
     t.string   "name"
     t.text     "description"
     t.string   "image_path"

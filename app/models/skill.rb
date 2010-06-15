@@ -1,3 +1,3 @@
 class Skill < ActiveRecord::Base
-  belongs_to :hero
+  has_one :hero
 end

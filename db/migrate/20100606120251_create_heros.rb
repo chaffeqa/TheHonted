@@ -4,6 +4,10 @@ class CreateHeros < ActiveRecord::Migration
       t.string :name
       t.text :description
       t.string :image_path
+      t.belongs_to :skill_1
+      t.belongs_to :skill_2
+      t.belongs_to :skill_3
+      t.belongs_to :skill_4
       t.integer :attack_range
       t.string :damage_range
       t.decimal :attacks_per_second

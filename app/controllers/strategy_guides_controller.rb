@@ -15,6 +15,11 @@ class StrategyGuidesController < ApplicationController
   # GET /strategy_guides/1.xml
   def show
     @strategy_guide = StrategyGuide.find(params[:id])
+    @hero = @strategy_guide.hero
+    @hero_pros = @strategy_guide.hero_pros
+    @hero_cons = @strategy_guide.hero_cons
+    @skill_build = @strategy_guide.skill_build
+    @strategy_items = @strategy_guide.strategy_items
   end
 
   # GET /strategy_guides/new

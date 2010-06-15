@@ -4,7 +4,7 @@ class StrategyGuide < ActiveRecord::Base
   has_one :skill_build, :dependent => :destroy
   has_many :hero_pros, :dependent => :destroy
   has_many :hero_cons, :dependent => :destroy
-  has_many :strategy_items
+  has_many :strategy_items, :dependent => :destroy
   accepts_nested_attributes_for :hero_pros, :allow_destroy => true, :reject_if => :all_blank
   accepts_nested_attributes_for :hero_cons, :allow_destroy => true, :reject_if => :all_blank
 

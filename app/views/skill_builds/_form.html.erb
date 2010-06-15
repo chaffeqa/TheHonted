@@ -112,9 +112,9 @@
   </div>
   <div class="field">
     <%= f.label :reasoning %><br />
-    <%= f.text_area :reasoning %>
+    <%= f.cktext_area :reasoning, :toolbar => 'Easy' %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :disable_with => "Please Wait..." %>
   </div>
 <% end %>

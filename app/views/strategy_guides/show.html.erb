@@ -1,19 +1,20 @@
-<p class="notice"><%= notice %></p>
-
 <p>
   <b>Hero:</b>
   <%= @strategy_guide.hero %>
 </p>
-
 <p>
-  <b>User:</b>
-  <%= @strategy_guide.user %>
+  <b>Created at </b><%= @strategy_guide.created_at.to_date %>
+  <b> By </b><%= @strategy_guide.user.login %>
 </p>
-
 <p>
   <b>About this guide:</b>
-  <%= @strategy_guide.about_this_guide %>
+<p><%=raw @strategy_guide.about_this_guide %></p>
 </p>
+<hr/>
+
+<%= render 'skill_builds/skill_build' %>
+
+
 
 
 <%= link_to 'Edit', edit_strategy_guide_path(@strategy_guide) %> |

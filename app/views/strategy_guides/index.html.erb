@@ -4,7 +4,6 @@
   <tr>
     <th>Hero</th>
     <th>User</th>
-    <th>About this guide</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,8 +12,7 @@
 <% @strategy_guides.each do |strategy_guide| %>
   <tr>
     <td><%= strategy_guide.hero %></td>
-    <td><%= strategy_guide.user %></td>
-    <td><%= strategy_guide.about_this_guide %></td>
+    <td><%= strategy_guide.user.login %></td>
     <td><%= link_to 'Show', strategy_guide %></td>
     <td><%= link_to 'Edit', edit_strategy_guide_path(strategy_guide) %></td>
     <td><%= link_to 'Destroy', strategy_guide, :confirm => 'Are you sure?', :method => :delete %></td>
