@@ -25,6 +25,6 @@ production:
   username: root
   password: VoodooPuppet
   host: localhost
-  socket: /var/lib/mysql/mysql.sock
+  socket: /var/run/mysqld/mysqld.sock
 
 
