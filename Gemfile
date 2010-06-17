@@ -16,6 +16,10 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.0.beta3'
 
+group :production do
+  gem 'mysql'
+end
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -25,7 +29,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'unicorn'
 
 # Deploy with Capistrano
- gem 'capistrano'
+gem 'capistrano'
 
 # Bundle the extra gems:
 # gem 'bj'
