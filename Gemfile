@@ -16,9 +16,9 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.0.beta3'
 
-#group :production do
-#  gem 'mysql'
-#end
+group :production do
+  gem 'mysql'
+end
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

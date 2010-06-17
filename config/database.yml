@@ -21,7 +21,7 @@ test:
 production:
   adapter: mysql
   encoding: utf8
-  database: thehonted_development
+  database: thehonted_production
   username: root
   password: VoodooPuppet
   host: localhost
