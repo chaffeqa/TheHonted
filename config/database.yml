@@ -19,8 +19,12 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/development.sqlite3_production
-  pool: 5
-  timeout: 5000
+  adapter: mysql
+  encoding: utf8
+  database: thehonted_development
+  username: root
+  password: VoodooPuppet
+  host: localhost
+  socket: /var/lib/mysql/mysql.sock
+
 

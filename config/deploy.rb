@@ -10,9 +10,9 @@ set :deploy_via, :remote_cache
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
 set :deploy_to, "/var/www"
-role :web, "thehonted.com"                          # Your HTTP server, Apache/etc
-role :app, "thehonted.com"                          # This may be the same as your `Web` server
-role :db,  "thehonted.com", :primary => true # This is where Rails migrations will run
+role :web, "192.168.2.100"                          # Your HTTP server, Apache/etc
+role :app, "192.168.2.100"                          # This may be the same as your `Web` server
+role :db,  "192.168.2.100", :primary => true # This is where Rails migrations will run
 # role :db,  "your slave db-server here"
 
 # If you are using Passenger mod_rails uncomment this:

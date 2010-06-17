@@ -81,7 +81,7 @@ Thehonted::Application.routes.draw do |map|
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => "welcome#index"
-  root :to => "strategy_guide#index"
+  root :to => "strategy_guides#index"
 
   # See how all your routes lay out with "rake routes"
 

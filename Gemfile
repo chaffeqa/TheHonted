@@ -1,3 +1,17 @@
+## A sample Gemfile
+#source :gemcutter
+##
+#gem "rails", "3.0.0.beta"
+#
+#gem "sqlite3-ruby"
+#
+#gem 'capistrano'
+#
+#gem 'railroad'
+#
+#gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
+#
+#gem 'ckeditor', :git => 'git://github.com/galetahub/rails-ckeditor.git', :branch => 'rails3'
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.0.beta3'
