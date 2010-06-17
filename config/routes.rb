@@ -43,7 +43,7 @@ Thehonted::Application.routes.draw do |map|
   #   resources :products
   resource :account, :controller => "users"
   resources :users
-  resource :user_session
+  resource :user_sessions
 
   # Sample resource route with options:
   #   resources :products do
