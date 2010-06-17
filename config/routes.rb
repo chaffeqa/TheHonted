@@ -41,9 +41,9 @@ Thehonted::Application.routes.draw do |map|
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-  map.resource :account, :controller => "users"
-  map.resources :users
-  map.resource :user_session
+  resource :account, :controller => "users"
+  resources :users
+  resource :user_session
 
   # Sample resource route with options:
   #   resources :products do
