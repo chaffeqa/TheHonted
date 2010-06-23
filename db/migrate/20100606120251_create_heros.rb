@@ -4,6 +4,7 @@ class CreateHeros < ActiveRecord::Migration
       t.string :name
       t.text :description
       t.string :image_path
+      t.string :primary_attr
       t.belongs_to :skill_1
       t.belongs_to :skill_2
       t.belongs_to :skill_3

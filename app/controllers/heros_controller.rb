@@ -80,4 +80,11 @@ class HerosController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+
+  ######################################
+  # Hero Views
+  ######################################
+
+
 end

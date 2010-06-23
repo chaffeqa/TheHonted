@@ -11,6 +11,7 @@ swiftblade = Hero.create(
   {:name => 'Swiftblade',
     :description => 'The unique armor worn by this mysterious warrior is said to have been uncovered in the ruins of an ancient city. Whether the armor imbues the famed speed and pinpoint accuracy possessed by the warrior called Swiftblade, or whether he would be equally mighty without it, none can say.',
     :image_path => 'images/heroes/swiftblade',
+    :primary_attr => 'Agility',
     :attack_range => '125',
     :damage_range => '44-48',
     :attacks_per_second => '0.71',
@@ -61,7 +62,8 @@ swiftblade.save
 nighthound = Hero.create( {
     :name => 'Nighthound',
     :description => 'Scurrilous rumors of unnatural parentage have haunted this proud, leonine warrior his entire life. He long served in the Beast Horde as a shadowy scout and assassin before taking on a comparable role in the new Legion. Wherever he came from, Night Hound is a welcome ally and a deadly foe.',
-    :image_path => 'images/heroes/nighthound'
+    :image_path => 'images/heroes/nighthound',
+    :primary_attr => 'Agility'
   })
 nighthound.create_skill_1({
   :name => 'Smoke Bomb',
@@ -90,7 +92,8 @@ moon_queen = Hero.create( {
     :name => 'Moon Queen',
     :description => '
 The insectoid Moon Warriors never entered into the great war between Man and Beast, but when the Hellbourne threatened Newerth, their very queen emerged to lead her people against the daemons. With powers drawn from the moon and from the shared will of her hive, this strange creature is a mighty boon for the Legion.',
-    :image_path => 'images/heroes/moon_queen.jpg'
+    :image_path => 'images/heroes/moon_queen.jpg',
+    :primary_attr => 'Agility'
   })
 moon_queen.create_skill_1({
   :name => 'Moon Beam',
@@ -119,7 +122,8 @@ wildsoul = Hero.create( {
     :name => 'Wildsoul',
     :description => '
 Is the mighty Wildsoul a Beast who dreamed himself a Man, or a Man who dreamed himself a Beast? As much a bear as a human, this druidic warrior draws upon primordial woodland energies to strengthen himself and crush those who threaten the natural life of Newerth.',
-    :image_path => 'images/heroes/wildsoul.jpg'
+    :image_path => 'images/heroes/wildsoul.jpg',
+    :primary_attr => 'Agility'
   })
 wildsoul.create_skill_1({
   :name => 'Beardulon',
@@ -148,7 +152,8 @@ wildsoul.save
 zephyr = Hero.create( {
     :name => 'Zephyr',
     :description => 'A riddler, a sage, and a lover of sweets, Zephyr sadly is known in these times simply as a warrior of the winds. Though he chose not to participate in the Beast Hordes war with the humans, he has joined battle against the Hellbourne, and the powerful winds and aerial attacks he calls down upon the daemons are a welcome addition to the new Legion.',
-    :image_path => 'images/heroes/zephyr.jpg'
+    :image_path => 'images/heroes/zephyr.jpg',
+    :primary_attr => 'Agility'
   })
 zephyr.create_skill_1({
   :name => 'Gust',
@@ -177,7 +182,8 @@ zephyr.save
 magebane = Hero.create( {
     :name => 'Magebane',
     :description => 'A keeper of lost lore and a priest to forgotten gods, Magebane invokes unholy rituals to drain the energy of his enemies and turn it back against them. In less desperate times, heretics such as Magebane would have been burned at the stake, but this is not the first unexpected clemency brought about by the war against the Hellbourne.',
-    :image_path => 'images/heroes/magebane.jpg'
+    :image_path => 'images/heroes/magebane.jpg',
+    :primary_attr => 'Agility'
   })
 magebane.create_skill_1({
   :name => 'Mana Combustion',
@@ -207,7 +213,8 @@ scout = Hero.create( {
     :name => 'Scout',
     :description => '
 Trained since youth to be swift, silent, and deadly, Scouts spend much of their lives deep in the wild, apart from their brethren. After the alliance with the Beast Horde, they learned yet more ways of the wild, and turned all their craft to defeating the Hellbourne. Though many view them as aloof, none doubt the importance of Scouts in the war against the daemons, as the countless enemy corpses, dead by a single blow, attest.',
-    :image_path => 'images/heroes/scout.jpg'
+    :image_path => 'images/heroes/scout.jpg',
+    :primary_attr => 'Agility'
   })
 scout.create_skill_1({
   :name => 'Vanish',
@@ -237,7 +244,8 @@ scout.save
 andromeda = Hero.create( {
     :name => 'Andromeda',
     :description => 'The star-born celestial known as Andromeda is a stranger to Newerth. With no memory of her home or her people, she is driven merely by an innate sense that the Hellbourne are vile and the mortal inhabitants of Newerth innocent. Her powerful dimensional magic allows her to bring destruction to the daemons or strength to her new-found allies.',
-    :image_path => 'images/heroes/andromeda.jpg'
+    :image_path => 'images/heroes/andromeda.jpg',
+    :primary_attr => 'Agility'
   })
 andromeda.create_skill_1({
   :name => 'Comet',
@@ -266,7 +274,8 @@ andromeda.save
 valkyrie = Hero.create( {
     :name => 'Valkyrie',
     :description => 'The ancient sagas of the heathen north have long told to the tale of the battle-women known as Valkyries. For centuries, their ranks have thinned as the old ways have died out and civilization stretched its smothering hand over the frozen wilds. But some Valkyries still remain, cold and swift as the north wind, wielding their lances with expertise to rival the most veteran Legion warriors.',
-    :image_path => 'images/heroes/valkyrie.jpg'
+    :image_path => 'images/heroes/valkyrie.jpg',
+    :primary_attr => 'Agility'
   })
 valkyrie.create_skill_1({
   :name => 'Call of the Valkyrie',
@@ -295,7 +304,8 @@ engineer = Hero.create( {
     :name => 'Engineer',
     :description => '
 The Engineer is a man driven by more than mere eccentricity. Once a humble, hard-drinking builder in the Legion, he came to be a master all manner of machines. Wielding a blunderbuss of his own design and hoisting ale and a veritable armory on his back, he is a strange but impressive sight on the battlefield.',
-    :image_path => 'images/heroes/engineer.jpg'
+    :image_path => 'images/heroes/engineer.jpg',
+    :primary_attr => 'Agility'
   })
 engineer.create_skill_1({
   :name => 'The Keg',
@@ -321,6 +331,7 @@ engineer.save
 
 
 chronos = Hero.create( {
+    :primary_attr => 'Agility',
     :name => 'Chronos',
     :description => 'The greatest inventors of the Human Legion dreamed of making an army of machine warriors to spare humans the bloody cost of war. Only one was ever created, for no one could ever find a way to quicken him. When the Hellbourne fed a stolen soul into its mechanical shell, they brought the Chronos to life and gained the benefit of this artificial monsters mastery over time itself.',
     :image_path => 'images/heroes/chronos.jpg'
@@ -353,7 +364,8 @@ chronos.save
 slither = Hero.create( {
     :name => 'Slither',
     :description => 'The Serpent of the Seventh Pit, feeder on the sick and the weak, was summoned forth in the last days of the war between Man and Beast. A cunning conniver and whisperer of false promises, Slither delights in suffering and despair.',
-    :image_path => 'images/heroes/slither.jpg'
+    :image_path => 'images/heroes/slither.jpg',
+    :primary_attr => 'Agility'
   })
 slither.create_skill_1({
   :name => 'Poison Spray',
@@ -380,9 +392,9 @@ slither.save
 
 blood_hunter = Hero.create( {
     :name => 'Blood Hunter',
-    :description => '
-Although the Hunters were members of the Beast Horde in its war against the humans, they always preferred the darkness to the light, and were won over to the Hellbourne with the promise of human blood. They are led by the traitor Blood Hunter, a swift and deadly warrior who feeds on the blood of his enemies and heals with horrifying speed.',
-    :image_path => 'images/heroes/blood_hunter.jpg'
+    :description => 'Although the Hunters were members of the Beast Horde in its war against the humans, they always preferred the darkness to the light, and were won over to the Hellbourne with the promise of human blood. They are led by the traitor Blood Hunter, a swift and deadly warrior who feeds on the blood of his enemies and heals with horrifying speed.',
+    :image_path => 'images/heroes/blood_hunter.jpg',
+    :primary_attr => 'Agility'
   })
 blood_hunter.create_skill_1({
   :name => 'Blood Crazy',
@@ -411,7 +423,8 @@ soulstealer = Hero.create( {
     :name => 'Soulstealer',
     :description => '
 The priests tell young men bound for the battlefield that if they fall, Elysian fields and peace awaits them. But this is not strictly true, not as long as the Soulstealer walks the battlefield. Gathering the spirits of those he kills in a bloody, shadowy sack, he augments his own power with their suffering. Those who see him quake in terror to know that death, for them, will be no release, but only a fiery captivity and oblivion.',
-    :image_path => 'images/heroes/soulstealer.jpg'
+    :image_path => 'images/heroes/soulstealer.jpg',
+    :primary_attr => 'Agility'
   })
 soulstealer.create_skill_1({
   :name => 'demon_hand',
@@ -440,7 +453,8 @@ soulstealer.save
 the_dark_lady = Hero.create( {
     :name => 'The Dark Lady',
     :description => 'Wielding twin, scythe-like blades, the she-reaper known as the Dark Lady has moved through the Legions ranks like a shadow of death. For soldiers seeking to buck up their courage, she is a punch-line: "Careful you dont find the Dark Lady", they joke to their carousing friend. But even these jokes are accompanied by a shudder. Swift and cold and lethal as the frozen winds off the steps, black as the cloud-choked night, she is no laughing matter.',
-    :image_path => 'images/heroes/the_dark_lady.jpg'
+    :image_path => 'images/heroes/the_dark_lady.jpg',
+    :primary_attr => 'Agility'
   })
 the_dark_lady.create_skill_1({
   :name => 'Dark Blades',
@@ -467,9 +481,9 @@ the_dark_lady.save
 
 the_madman = Hero.create( {
     :name => 'The Madman',
-    :description => '
-No one knows for certain the identity of this masked and demented murderer. Some say he was confined for eons in the deepest pit of Hell, a villain so black at heart that even the Hellbourne treated him as a pariah, yet so deadly that they were forced to call upon him in their war with the Legion. Others say he is a man, just a man, but driven mad by the endless carnage he has witnessed.',
-    :image_path => 'images/heroes/the_madman.jpg'
+    :description => 'No one knows for certain the identity of this masked and demented murderer. Some say he was confined for eons in the deepest pit of Hell, a villain so black at heart that even the Hellbourne treated him as a pariah, yet so deadly that they were forced to call upon him in their war with the Legion. Others say he is a man, just a man, but driven mad by the endless carnage he has witnessed.',
+    :image_path => 'images/heroes/the_madman.jpg',
+    :primary_attr => 'Agility'
   })
 the_madman.create_skill_1({
   :name => 'Stalk',
@@ -498,9 +512,9 @@ the_madman.save
 
 arachna = Hero.create( {
     :name => 'Arachna',
-    :description => '
-It is said that for every fear and phobia that afflicts Man and Beast alike, there is a daemon waiting to be born. Arachna -- chittering, skulking, crooked and wicked -- spawns from the fear of spiders. Protected by a chitinous exoskeleton as strong as cold iron, she stalks, and traps, and slaughters her enemies.',
-    :image_path => 'images/heroes/arachna.jpg'
+    :description => 'It is said that for every fear and phobia that afflicts Man and Beast alike, there is a daemon waiting to be born. Arachna -- chittering, skulking, crooked and wicked -- spawns from the fear of spiders. Protected by a chitinous exoskeleton as strong as cold iron, she stalks, and traps, and slaughters her enemies.',
+    :image_path => 'images/heroes/arachna.jpg',
+    :primary_attr => 'Agility'
   })
 arachna.create_skill_1({
   :name => 'Webbed Shot',
@@ -528,7 +542,8 @@ arachna.save
 corrupted_disciple = Hero.create( {
     :name => 'Corrupted Disciple',
     :description => 'Having traded Sols sacred flame for the potent and unholy energy of the Hellbourne, the Corrupted Disciple is now little more than a battery of black magic. He unleashes this fell sorcery in many forms, some to his benefit but all to the agony of those around him.',
-    :image_path => 'images/heroes/corrupted_disciple.jpg'
+    :image_path => 'images/heroes/corrupted_disciple.jpg',
+    :primary_attr => 'Agility'
   })
 corrupted_disciple.create_skill_1({
   :name => 'Electric Tide',
@@ -555,9 +570,9 @@ corrupted_disciple.save
 
 sand_wraith = Hero.create( {
     :name => 'Sand Wraith',
-    :description => '
-Legends long said that when the sirocco howls off the Great Waste, it is screaming of a Sand Wraith. In the past years, the legend has been borne out, as this ancient evil has glided through Newerth, leaving curses, confusion, and despair in his dusty wake.',
-    :image_path => 'images/heroes/sand_wraith.jpg'
+    :description => 'Legends long said that when the sirocco howls off the Great Waste, it is screaming of a Sand Wraith. In the past years, the legend has been borne out, as this ancient evil has glided through Newerth, leaving curses, confusion, and despair in his dusty wake.',
+    :image_path => 'images/heroes/sand_wraith.jpg',
+    :primary_attr => 'Agility'
   })
 sand_wraith.create_skill_1({
   :name => 'Deserts Curse',
@@ -585,7 +600,8 @@ sand_wraith.save
 forsaken_archer = Hero.create( {
     :name => 'Forsaken Archer',
     :description => 'Once a woodland huntress who captured the hearts of countless men, the Forsaken Archer was taken against her will and slain by a spurned suitor. As she lay dying she forged a terrible pact with the daemons who discovered her broken body. Now, rather than hearts it is souls she captures, wielding them as weapons. Atop the skeletal remains of a beast she once hunted, the forsaken archer rains terror upon any who stand in her path.',
-    :image_path => 'images/heroes/forsaken_archer.jpg'
+    :image_path => 'images/heroes/forsaken_archer.jpg',
+    :primary_attr => 'Agility'
   })
 forsaken_archer.create_skill_1({
   :name => 'Crippling Volley',
@@ -612,9 +628,9 @@ forsaken_archer.save
 
 fayde = Hero.create( {
     :name => 'Fayde',
-    :description => '
-A shadow cast by the evil in the hearts of Man and Beast alike, Fayde lurks in the dark places of Newerth. While her scythe-like claws are terrible enough, it is her ability to call forth new shadows of herself--or her foes--that is most awful of all.',
-    :image_path => 'images/heroes/fayde.jpg'
+    :description => 'A shadow cast by the evil in the hearts of Man and Beast alike, Fayde lurks in the dark places of Newerth. While her scythe-like claws are terrible enough, it is her ability to call forth new shadows of herself--or her foes--that is most awful of all.',
+    :image_path => 'images/heroes/fayde.jpg',
+    :primary_attr => 'Agility'
   })
 fayde.create_skill_1({
   :name => 'Cull',
@@ -642,7 +658,8 @@ fayde.save
 blacksmith = Hero.create( {
     :name => 'Blacksmith',
     :description => 'The smoke-blackened foundries of the Iron City have long been known to produce the endless stream of weapons and armor that make the Legions war against the Hellbourne possible. But now, as manpower becomes harder to replace than supplies, the very Blacksmiths themselves have joined the battlefield, bringing strength earned through decades of toil and a mastery over fire itself.',
-    :image_path => 'images/heroes/blacksmith.jpg'
+    :image_path => 'images/heroes/blacksmith.jpg',
+    :primary_attr => 'Intelligence'
   })
 blacksmith.create_skill_1({
   :name => 'Fireball',
@@ -669,9 +686,9 @@ blacksmith.save
 
 nymphora = Hero.create( {
     :name => 'Nymphora',
-    :description => '
-Nymphora has long been a protectress of Newerths secret beauties, its secluded glades and crystal springs. One might think that the paragon of butterflies and skylarks would have little role in the brutal carnage that has engulfed the world, but one need only see the tiny fangs revealed by her smile to know that she holds secret dangers of her own.',
-    :image_path => 'images/heroes/nymphora.jpg'
+    :description => 'Nymphora has long been a protectress of Newerths secret beauties, its secluded glades and crystal springs. One might think that the paragon of butterflies and skylarks would have little role in the brutal carnage that has engulfed the world, but one need only see the tiny fangs revealed by her smile to know that she holds secret dangers of her own.',
+    :image_path => 'images/heroes/nymphora.jpg',
+    :primary_attr => 'Intelligence'
   })
 nymphora.create_skill_1({
   :name => 'Volatile Pod',
@@ -698,9 +715,9 @@ nymphora.save
 
 glacius = Hero.create( {
     :name => 'Glacius',
-    :description => '
-The berserker warriors of the land of Frostfield have long had a legend of Glacius, an ancient warrior who would break free of his frozen prison when the lands of Newerth needed him most. When he did not appear to combat the Beast Horde, many lost faith. But on the eve of the war with the Hellbourne, a man made more of cold than flesh emerged from the tundra, wrapped in mist and armored in ice. The stranger claimed the name Glacius, and his potent magics have made believers of those who doubted his identity.',
-    :image_path => 'images/heroes/glacius.jpg'
+    :description => 'The berserker warriors of the land of Frostfield have long had a legend of Glacius, an ancient warrior who would break free of his frozen prison when the lands of Newerth needed him most. When he did not appear to combat the Beast Horde, many lost faith. But on the eve of the war with the Hellbourne, a man made more of cold than flesh emerged from the tundra, wrapped in mist and armored in ice. The stranger claimed the name Glacius, and his potent magics have made believers of those who doubted his identity.',
+    :image_path => 'images/heroes/glacius.jpg',
+    :primary_attr => 'Intelligence'
   })
 glacius.create_skill_1({
   :name => 'Tundra Blast',
@@ -728,7 +745,8 @@ glacius.save
 thunderbringer = Hero.create( {
     :name => 'Thunderbringer',
     :description => 'Unlike the wild lightning he commands, the Thunderbringer is marked by his calm patience and careful adherence to the ancient Beast protocols and etiquette. Though considered a bit of a fogey by others, he is an undeniable master of shamanic lore and a powerful wielder of mystic energies.',
-    :image_path => 'images/heroes/thunderbringer.jpg'
+    :image_path => 'images/heroes/thunderbringer.jpg',
+    :primary_attr => 'Intelligence'
   })
 thunderbringer.create_skill_1({
   :name => 'Chain Lightning',
@@ -758,7 +776,8 @@ thunderbringer.save
 pollywog_priest = Hero.create( {
     :name => 'Pollywog Priest',
     :description => 'For centuries, every great Frog of the marsh peoples has wielded both political and magical power as the chief priest of the Wild Cults. Called upon by his Beast brethren in this time of war, the Pollywog Priest has come forth to use those powers in defense of his people and Newerth itself.',
-    :image_path => 'images/heroes/pollywog_priest.jpg'
+    :image_path => 'images/heroes/pollywog_priest.jpg',
+    :primary_attr => 'Intelligence'
   })
 pollywog_priest.create_skill_1({
   :name => 'Electric Jolt',
@@ -786,7 +805,8 @@ pollywog_priest.save
 tempest = Hero.create( {
     :name => 'Tempest',
     :description => 'Spirits born of the elements, Tempests howl across the land raining fire and ice alike, indeed even calling great meteors from the heavens. Summoned of old by the Beast Horde, these ethereal beings now are summoners themselves, bringing elementals and even shadows of themselves onto the battlefield. Even their allies view these strange beings with awe bordering on fear.',
-    :image_path => 'images/heroes/tempest.jpg'
+    :image_path => 'images/heroes/tempest.jpg',
+    :primary_attr => 'Intelligence'
   })
 tempest.create_skill_1({
   :name => 'Glacial Blasts',
@@ -813,9 +833,9 @@ tempest.save
 
 ophelia = Hero.create( {
     :name => 'Ophelia',
-    :description => '
-Few are those who do not know of Ophelia, Queen of the Beast Horde and sister to Jeraziah. Though numerous are her talents, she is most revered for her innate ability to commune with all things natural. Both a warrior and a leader, Ophelia wields these powers over nature to serve the Legion by healing allies and recruiting the wild denizens of Newerth to their cause.',
-    :image_path => 'images/heroes/ophelia.jpg'
+    :description => 'Few are those who do not know of Ophelia, Queen of the Beast Horde and sister to Jeraziah. Though numerous are her talents, she is most revered for her innate ability to commune with all things natural. Both a warrior and a leader, Ophelia wields these powers over nature to serve the Legion by healing allies and recruiting the wild denizens of Newerth to their cause.',
+    :image_path => 'images/heroes/ophelia.jpg',
+    :primary_attr => 'Intelligence'
   })
 ophelia.create_skill_1({
   :name => 'Natures Wrath',
@@ -842,9 +862,9 @@ ophelia.save
 
 pyromancer = Hero.create( {
     :name => 'Pyromancer',
-    :description => '
-For centuries, the Sacred Order has recognized the "Flame-Touched," those men and women filled with a burning, if more than slightly mad, devotion to Sol. Those Flame-Touched who serve in the Legion are more commonly called Pyromancers for their mastery over fire, and creatures strongly attuned to that element.',
-    :image_path => 'images/heroes/pyromancer.jpg'
+    :description => 'For centuries, the Sacred Order has recognized the "Flame-Touched," those men and women filled with a burning, if more than slightly mad, devotion to Sol. Those Flame-Touched who serve in the Legion are more commonly called Pyromancers for their mastery over fire, and creatures strongly attuned to that element.',
+    :image_path => 'images/heroes/pyromancer.jpg',
+    :primary_attr => 'Intelligence'
   })
 pyromancer.create_skill_1({
   :name => 'Phoenix Wave',
@@ -871,9 +891,9 @@ pyromancer.save
 
 vindicator = Hero.create( {
     :name => 'Vindicator',
-    :description => '
-From one generation to the next, a reclusive order of hermits have guarded apocryphal writings said to come from the Prophet himself. Vindicator, still early in his lonely quest, is the last of these lonely sentinels, but he has left his exile behind in order to join the battle against the Hellbourne. Using the potent verses inscribed in the Great Book, he wields unique and powerful magic.',
-    :image_path => 'images/heroes/vindicator.jpg'
+    :description => 'From one generation to the next, a reclusive order of hermits have guarded apocryphal writings said to come from the Prophet himself. Vindicator, still early in his lonely quest, is the last of these lonely sentinels, but he has left his exile behind in order to join the battle against the Hellbourne. Using the potent verses inscribed in the Great Book, he wields unique and powerful magic.',
+    :image_path => 'images/heroes/vindicator.jpg',
+    :primary_attr => 'Intelligence'
   })
 vindicator.create_skill_1({
   :name => 'Sages Lore',
@@ -901,7 +921,8 @@ vindicator.save
 witch_slayer = Hero.create( {
     :name => 'Witch Slayer',
     :description => 'No city is more pious in its worship of Sol than Arasunia, and no man is more fervent among its zealous citizens than the Witch Slayer. Although he is viewed with uncertainty by the Beast shamans and human sorcerers in the Legion, his combat prowess and holy powers make him a mighty ally. Wielding a musket and a bladed icon of Sol, he not only can hold his own in battle, but also can sap his enemys strength and turn any ground into sacred territory.',
-    :image_path => 'images/heroes/witch_slayer.jpg'
+    :image_path => 'images/heroes/witch_slayer.jpg',
+    :primary_attr => 'Intelligence'
   })
 witch_slayer.create_skill_1({
   :name => 'Graveyard',
@@ -929,7 +950,8 @@ witch_slayer.save
 the_chipper = Hero.create( {
     :name => 'The Chipper',
     :description => 'The elusive chiprel race has spent countless years avoiding conflict, but the Hellbourne are not a threat easily ignored. The Chipper has taken action, piloting an advanced tactical combat and acorn collection machine. Armed with missiles, tar dispensers, and deployable saw blades, The Chipper is ready for war.',
-    :image_path => 'images/heroes/the_chipper.jpg'
+    :image_path => 'images/heroes/the_chipper.jpg',
+    :primary_attr => 'Intelligence'
   })
 the_chipper.create_skill_1({
   :name => 'Rocket Barrage',
@@ -957,7 +979,8 @@ the_chipper.save
 bubbles = Hero.create( {
     :name => 'Bubbles',
     :description => 'A powerful wizard once owned a pet turtle. Each day, the turtle watched and mimicked as the wizard practiced his spells. One day, the turtle fell into a magical pool and was transformed into more than a mere turtle. Now, centuries after his master died, Bubbles lives on, fighting the forces of evil.',
-    :image_path => 'images/heroes/bubbles.jpg'
+    :image_path => 'images/heroes/bubbles.jpg',
+    :primary_attr => 'Intelligence'
   })
 bubbles.create_skill_1({
   :name => 'Shell Surf',
@@ -985,7 +1008,8 @@ bubbles.save
 defiler = Hero.create( {
     :name => 'Defiler',
     :description => 'Enshrouded with shadows and the echoes of damned souls, the Defiler is a lover of decay and madness and agony. She draws strength from death around her, and can expel living, suffering shadows from her flesh. Wielding both deadly attacks and an unholy awe that strikes silence into her foes, she truly deserves her vile epithet: "Mistress of the Damned."',
-    :image_path => 'images/heroes/defiler.jpg'
+    :image_path => 'images/heroes/defiler.jpg',
+    :primary_attr => 'Intelligence'
   })
 defiler.create_skill_1({
   :name => 'Wave of Death',
@@ -1014,7 +1038,8 @@ defiler.save
 demented_shaman = Hero.create( {
     :name => 'Demented Shaman',
     :description => 'No greater shame has the Beast Horde than the Demented Shaman: one of their holiest priests, an initiate into their deepest secrets and greatest lore, who betrayed his people and turned to join the Hellbourne. He is a force of corruption and outrage, draining the life of the land to heal those who would destroy it and defeat those who would defend it.',
-    :image_path => 'images/heroes/demented_shaman.jpg'
+    :image_path => 'images/heroes/demented_shaman.jpg',
+    :primary_attr => 'Intelligence'
   })
 demented_shaman.create_skill_1({
   :name => 'Entangle',
@@ -1042,7 +1067,8 @@ demented_shaman.save
 voodoo_jester = Hero.create( {
     :name => 'Voodoo Jester',
     :description => 'The Voodoo Jester haunts the dreams of countless warriors with his demented laughter, glowing eyes, and deadly magic. It is said that every time a child weeps, his power grows stronger, though some believe this rumor was invented by parents to quiet their unruly children.',
-    :image_path => 'images/heroes/voodoo_jester.jpg'
+    :image_path => 'images/heroes/voodoo_jester.jpg',
+    :primary_attr => 'Intelligence'
   })
 voodoo_jester.create_skill_2({
   :name => 'Mojo',
@@ -1070,7 +1096,8 @@ voodoo_jester.save
 puppet_master = Hero.create( {
     :name => 'Puppet Master',
     :description => 'Although all the daemons of the Hellbourne ranks are terrifying, few deserve to be called "creepy." Yet that is the best word for the Puppet Master, whose smirks and gibbers and cackles of glee bespeak not just the specter of death, but something worse. His puppets are offenses to life -- either false things imbued with stolen life, or living things twisted to his will.',
-    :image_path => 'images/heroes/puppet_master.jpg'
+    :image_path => 'images/heroes/puppet_master.jpg',
+    :primary_attr => 'Intelligence'
   })
 puppet_master.create_skill_1({
   :name => 'Puppeteers Hold',
@@ -1099,7 +1126,8 @@ puppet_master.save
 hellbringer = Hero.create( {
     :name => 'Hellbringer',
     :description => 'During the war against the Beasts, many humans became experts in summoning daemons to fight alongside the Legion. Some became addicted to this unholy act, and even when the Hellbourne turned against their masters, continued to invoke the dark rituals. One such warlock is known only as Hellbringer, now a captain in the Hellbourne army and perhaps the most despised man on Newerth.',
-    :image_path => 'images/heroes/hellbringer.jpg'
+    :image_path => 'images/heroes/hellbringer.jpg',
+    :primary_attr => 'Intelligence'
   })
 hellbringer.create_skill_1({
   :name => 'Unholy Shackles',
@@ -1128,7 +1156,8 @@ hellbringer.save
 torturer = Hero.create( {
     :name => 'Torturer',
     :description => 'Many years ago, the Torturer was just a dying man who made a pact to serve the Hellbourne in exchange for eternal life. However, to ensure his loyalty without the distraction of physical temptations, the Hellbourne stripped the man of his physical body leaving the pure energy of destruction, agony, and hate.',
-    :image_path => 'images/heroes/torturer.jpg'
+    :image_path => 'images/heroes/torturer.jpg',
+    :primary_attr => 'Intelligence'
   })
 torturer.create_skill_1({
   :name => 'Chain Reaction',
@@ -1157,7 +1186,8 @@ torturer.save
 wretched_hag = Hero.create( {
     :name => 'Wretched Hag',
     :description => 'The Wretched Hag haunted Newerths darkness long before the Hellbourne spilled forth. A fiendish hag fatted off the flesh of children and virgin brides, she keeps as her only company a swarm of bats -- the only creatures that can abide her shrieking cries.',
-    :image_path => 'images/heroes/wretched_hag.jpg'
+    :image_path => 'images/heroes/wretched_hag.jpg',
+    :primary_attr => 'Intelligence'
   })
 wretched_hag.create_skill_1({
   :name => 'Haunt',
@@ -1186,7 +1216,8 @@ wretched_hag.save
 succubus = Hero.create( {
     :name => 'Succubus',
     :description => 'Many a soldier of the Legion has disappeared on solitary watches when the Succubus is at large, lured in by her seductive calls. Swollen with stolen life, this daemon offers no true pleasure to those who succumb to her advances, but all the same her name carries a certain terrible allure.',
-    :image_path => 'images/heroes/succubus.jpg'
+    :image_path => 'images/heroes/succubus.jpg',
+    :primary_attr => 'Intelligence'
   })
 succubus.create_skill_1({
   :name => 'smitten',
@@ -1214,7 +1245,8 @@ succubus.save
 plague_rider = Hero.create( {
     :name => 'Plague Rider',
     :description => 'The pestilential stench of the Plague Rider can be smelled for miles, a foul warning of the diseases following in its wake. Mounted atop his undead steed, carried aloft on a stinking cloud of flies, the Plague Rider sows sickness among friends and enemies alike, all with the end of spreading disease across the lands of Newerth.',
-    :image_path => 'images/heroes/plague_rider.jpg'
+    :image_path => 'images/heroes/plague_rider.jpg',
+    :primary_attr => 'Intelligence'
   })
 plague_rider.create_skill_1({
   :name => 'Contagion',
@@ -1242,7 +1274,8 @@ plague_rider.save
 soul_reaper = Hero.create( {
     :name => 'Soul Reaper',
     :description => 'The Soul Reaper is born in the depths of Hell itself and has risen to the surface on a mission to capture the souls of Newerth. With the authority to instantly judge those he comes in contact with, even the strongest of the Legion wither when he approaches.',
-    :image_path => 'images/heroes/soul_reaper.jpg'
+    :image_path => 'images/heroes/soul_reaper.jpg',
+    :primary_attr => 'Intelligence'
   })
 soul_reaper.create_skill_1({
   :name => 'Judgment',
@@ -1270,7 +1303,8 @@ soul_reaper.save
 armadon = Hero.create( {
     :name => 'Armadon',
     :description => 'A stolid and stalwart defender of the weak, whether Man or Beast, the long-lived Armadon refused to take part in the war between the Legion and the Horde, and instead maintained a neutral haven amidst the strife. With the arrival of the Hellbourne, however, Armadons choice became clear, and he hefted his mighty mace in the service of good. The gruff warrior is now a key hero in the New Legion.',
-    :image_path => 'images/heroes/armadon.jpg'
+    :image_path => 'images/heroes/armadon.jpg',
+    :primary_attr => 'Strength'
   })
 armadon.create_skill_1({
   :name => 'Snot Storm',
@@ -1299,7 +1333,8 @@ armadon.save
 behemoth = Hero.create( {
     :name => 'Behemoth',
     :description => 'Earth-shakers and wall-breakers, Behemoths march across the battlefield wielding uprooted trees with deadly force. The sheer force of their attacks brings enemies to their knees, where powerful blows make short work of them. Of all the Beasts, none are so mighty as these noble creatures, nor any so willing to stand between the daemons and their friends.',
-    :image_path => 'images/heroes/behemoth.jpg'
+    :image_path => 'images/heroes/behemoth.jpg',
+    :primary_attr => 'Strength'
   })
 behemoth.create_skill_1({
   :name => 'Fissure',
@@ -1324,29 +1359,569 @@ behemoth.create_skill_4({
 behemoth.save
 
 
-#zephyr = Hero.create( {
-#    :name => 'Zephyr',
-#    :description => '',
-#    :image_path => 'images/heroes/zephyr.jpg'
-#  })
-#zephyr.create_skill_1({
-#  :name => '',
-#  :description => '',
-#  :image_path => 'images/skills/.jpg'
-#})
-#zephyr.create_skill_2({
-#  :name => '',
-#  :description => '',
-#  :image_path => 'images/skills/.jpg'
-#})
-#zephyr.create_skill_3({
-#  :name => '',
-#  :description => '',
-#  :image_path => 'images/skills/.jpg'
-#})
-#zephyr.create_skill_4({
-#  :name => '',
-#  :description => '',
-#  :image_path => 'images/skills/.jpg'
-#})
-#zephyr.save
+hammerstorm = Hero.create( {
+    :name => 'Hammerstorm',
+    :description => 'Mighty and stoic, this famed warrior left behind the ruins of his home for a place in King Malikens first Legion. From boyhood on, he has known nothing but battle, and his silent determination and deadly strength have earned him the epithet "Hammerstorm." Every blow of his hammer resounds like a death knell across the battlefield',
+    :image_path => 'images/heroes/hammerstorm.jpg',
+    :primary_attr => 'Strength'
+  })
+hammerstorm.create_skill_1({
+  :name => 'Hammer Throw',
+  :description => 'Hammerstorm throws his mighty hammer at a target enemy, damaging and stunning anyone near where it lands.',
+  :image_path => 'images/skills/hammer_throw.jpg'
+})
+hammerstorm.create_skill_2({
+  :name => 'Mighty Swing',
+  :description => 'Hammerstorm attacks with great might, causing his attacks to damage nearby enemies in addition to his main target.',
+  :image_path => 'images/skills/mighty_swing.jpg'
+})
+hammerstorm.create_skill_3({
+  :name => 'Galvanize',
+  :description => 'Everyone else is a loser compared to Hammerstorm. Fortunately, Hammerstorms awesomeness is so great that he influences nearby allies with his battle cry, buffing their armor and movement speed.',
+  :image_path => 'images/skills/galvanize.jpg'
+})
+hammerstorm.create_skill_4({
+  :name => 'Brute Strength',
+  :description => 'Hammerstorm unleashes a savage fury within him, majorly increasing his attack damage temporarily.',
+  :image_path => 'images/skills/brute_strength.jpg'
+})
+hammerstorm.save
+
+
+
+pebbles = Hero.create( {
+    :name => 'Pebbles',
+    :description => 'The elemental creatures of Newerth have long kept away from mortal struggles, seeking instead to heal the destruction left in their wake. In the current war, however, some elementals have taken arm against the daemons, and the huge and implacable Pebbles is one of them.',
+    :image_path => 'images/heroes/pebbles.jpg',
+    :primary_attr => 'Strength'
+  })
+pebbles.create_skill_1({
+  :name => 'Stalagmites',
+  :description => 'Pebbles summons forth an eruption of stalagmites at a target location, stunning and damaging all enemies in the area.',
+  :image_path => 'images/skills/stalagmites.jpg'
+})
+pebbles.create_skill_2({
+  :name => 'Chuck',
+  :description => 'Pebbles throws a nearby unit to target location, damaging it and all enemies in an area around where it lands.',
+  :image_path => 'images/skills/chuck.jpg'
+})
+pebbles.create_skill_3({
+  :name => 'Slab Skin',
+  :description => 'Grants bonus armor and reduces the duration of debuffs.',
+  :image_path => 'images/skills/slab_skin.jpg'
+})
+pebbles.create_skill_4({
+  :name => 'Enlarge',
+  :description => 'Makes Pebbles grow larger, increasing attack damage, move speed, adding to the power of his other skills, yet greatly slowing his attack speed.',
+  :image_path => 'images/skills/enlarge.jpg'
+})
+pebbles.save
+
+
+
+keeper_of_the_forest = Hero.create( {
+    :name => 'Keeper of the Forest',
+    :description => 'An ancient protector of the forest, the Keeper fights to save the lush lands of Newerth he has tended to his whole long life. Possessing a spiritual link to the trees, the Keeper has the ability to see what they see, be hidden amongst them, and even use them as brutal weapons to aid him in battle.',
+    :image_path => 'images/heroes/keeper_of_the_forest.jpg',
+    :primary_attr => 'Strength'
+  })
+keeper_of_the_forest.create_skill_1({
+  :name => 'Camouflage',
+  :description => 'The Keeper uses his influence over the forest to hide his allies from enemy sight. Grants invisibility to target unit so long as they remain near trees.',
+  :image_path => 'images/skills/camouflage.jpg'
+})
+keeper_of_the_forest.create_skill_2({
+  :name => 'Tree Sight',
+  :description => 'The Keeper links his mind with a target tree, sharing its vision.',
+  :image_path => 'images/skills/tree_sight.jpg'
+})
+keeper_of_the_forest.create_skill_3({
+  :name => 'Natures Protection',
+  :description => 'The Keeper grants part of the forests power to the target ally, increasing their armor and regeneration for a period of time.',
+  :image_path => 'images/skills/natures_protection.jpg'
+})
+keeper_of_the_forest.create_skill_4({
+  :name => 'Root',
+  :description => 'The Keeper calls upon the roots in the ground to disarm and immobilize his foes, as well as damage them over time.',
+  :image_path => 'images/skills/root.jpg'
+})
+keeper_of_the_forest.save
+
+
+
+legionnaire = Hero.create( {
+    :name => 'Legionnaire',
+    :description => 'Legionnaires, the namesakes of the Legion itself, bring unflinching power to the battlefield. With their massive battle-axes, these warriors spread carnage among their foes and cleave bloody swaths through enemy ranks. Even those daemons born of fear itself can be terrified by these heroes of the Legion.',
+    :image_path => 'images/heroes/legionnaire.jpg',
+    :primary_attr => 'Strength'
+  })
+legionnaire.create_skill_1({
+  :name => 'Taunt',
+  :description => 'The Legionnaire taunts nearby foes, forcing them to attack him for a few seconds. The Legionnaire prepares himself for the attack, increasing his armor significantly for the duration.',
+  :image_path => 'images/skills/taunt.jpg'
+})
+legionnaire.create_skill_2({
+  :name => 'Terrifying Charge',
+  :description => 'The Legionnaire charges very quickly at a target foe and swings wide with his mighty axe upon reaching them, dealing damage and Terrifying those unfortunate enough to be standing there. Terrified enemies attack very quickly, but do less damage per attack.',
+  :image_path => 'images/skills/terrifying_charge.jpg'
+})
+legionnaire.create_skill_3({
+  :name => 'Whirling Blade',
+  :description => 'The Legionnaires skill with a Battle Axe is unrivaled. Every time he is attacked, he has a small chance to perform a Whirling Blade maneuver, which damages all nearby enemies.',
+  :image_path => 'images/skills/whirling_blade.jpg'
+})
+legionnaire.create_skill_4({
+  :name => 'Decapitate',
+  :description => 'The Legionnaire performs a mighty attack with his Battle Axe, attempting to decapitate a target enemy. If the target is low on Health, this attack will instantly kill the target.',
+  :image_path => 'images/skills/decapitate.jpg'
+})
+legionnaire.save
+
+
+
+predator = Hero.create( {
+    :name => 'Predator',
+    :description => 'With huge, lance-like claws of solid bone emerging from their forearms, and spikes fit to impale the strongest foe spread across their hard shell, Predators seem more like daemons than Beasts. The men who fight beside them look at them with recollected fear from the days the Predators hunted humans, not daemons. But the hunger, speed, and rage they bring to bear against the Hellbourne are a welcome boon.',
+    :image_path => 'images/heroes/predator.jpg',
+    :primary_attr => 'Strength'
+  })
+predator.create_skill_1({
+  :name => 'Venomous Leap',
+  :description => 'The Predator leaps toward an enemy unit, then strikes them with venomous claws. The enemy takes some damage and is slowed briefly.',
+  :image_path => 'images/skills/venomous_leap.jpg'
+})
+predator.create_skill_2({
+  :name => 'Stone Hide',
+  :description => 'The Predator makes his hide like stone, granting him Magic Immunity, dispelling debuffs, and increasing his armor temporarily.',
+  :image_path => 'images/skills/stone_hide.jpg'
+})
+predator.create_skill_3({
+  :name => 'Carnivorous',
+  :description => 'The Predator feasts on his opponents flesh with each attack, allowing him to topple the mightiest warriors. Each attack damages opponents for a percentage of their current Health, and heals the Predator based on the damage dealt.',
+  :image_path => 'images/skills/carnivorous.jpg'
+})
+predator.create_skill_4({
+  :name => 'Terror',
+  :description => 'The Predator roars, instilling Terror in nearby enemies, reducing their armor. Allies who attack enemies affected by Terror will receive increased attack and movement speed.',
+  :image_path => 'images/skills/terror.jpg'
+})
+predator.save
+
+
+
+jereziah = Hero.create( {
+    :name => 'Jereziah',
+    :description => 'King Jeraziah, the hope of humanity and one of the two leaders of the new Legion, is not just a mighty warrior but also the chosen of Sol himself. Charged with divine fervor and favor, he rallies his men and wreaks havoc among the daemons. The light that shines forth from him leads all toward victory, and represents the dawning of a new day, one without cloud or shadow.',
+    :image_path => 'images/heroes/jereziah.jpg',
+    :primary_attr => 'Strength'
+  })
+jereziah.create_skill_1({
+  :name => 'Inner Light',
+  :description => 'Jeraziah unleashes a nearby allied units Inner Light, healing them. Nearby enemies are seared by the power of the Light, causing them to take damage.',
+  :image_path => 'images/skills/inner_light.jpg'
+})
+jereziah.create_skill_2({
+  :name => 'Protective Charm',
+  :description => 'Jeraziah blesses an allied unit with protective charm that grants immunity to Magic and removes all debuffs.',
+  :image_path => 'images/skills/protective_charm.jpg'
+})
+jereziah.create_skill_3({
+  :name => 'Righteous Strike',
+  :description => 'A righteous anger builds up in Jeraziah, allowing him to perform a Righteous Strike when attacking, dealing increased damage which splashes to nearby enemies and slows their movement speed briefly. Can only occur once every few seconds.',
+  :image_path => 'images/skills/righteous_strike.jpg'
+})
+jereziah.create_skill_4({
+  :name => 'Sols Blessing',
+  :description => 'Jeraziah calls upon the power of Sol to protect himself and his comrades. Sol answers his call, causing them to take almost no Physical damage and receive high Health regeneration for a brief time.',
+  :image_path => 'images/skills/sols_blessing.jpg'
+})
+jereziah.save
+
+
+
+pandamonium = Hero.create( {
+    :name => 'Pandamonium',
+    :description => 'The last of a race of warrior-monks sworn to a chaste existence in the misty Sang-La mountains, Pandamonium has left his bamboo groves for the battlefield. He moves with a grace that belies his great stature and strikes with fury surprising in one with such an apparently gentle nature. And though he is a creature of few words, the Beasts put great stock in his wisdom.',
+    :image_path => 'images/heroes/pandamonium.jpg',
+    :primary_attr => 'Strength'
+  })
+pandamonium.create_skill_1({
+  :name => 'Flurry',
+  :description => 'Pandamonium unleashes devastating physical attacks on all opponents in front of him, pushing them, along with himself, in the direction he faces.',
+  :image_path => 'images/skills/flurry.jpg'
+})
+pandamonium.create_skill_2({
+  :name => 'Flick',
+  :description => 'Placing his enemies where he sees fit, Pandamonium flicks a target foe into the air, causing them to land behind him. Upon landing, the target foe is slowed and has reduced armor.',
+  :image_path => 'images/skills/flick.jpg'
+})
+pandamonium.create_skill_3({
+  :name => 'Cannon Ball',
+  :description => 'Pandamonium throws himself into the air, damaging all nearby enemies when he lands. Any enemies he lands on are stunned. If he doesnt have any enemies to soften his fall, he gets stuck in the ground temporarily.',
+  :image_path => 'images/skills/cannon_ball.jpg'
+})
+pandamonium.create_skill_4({
+  :name => 'Face Smash',
+  :description => 'Pandamonium beats a target enemy unit senseless, disabling it while he unleashes four extra-powerful attacks on it over several seconds.',
+  :image_path => 'images/skills/face_smash.jpg'
+})
+pandamonium.save
+
+
+
+rampage = Hero.create( {
+    :name => 'Rampage',
+    :description => 'A ranger of the vast plains of Seradati, Rampage has captured in his human form the strength of the Beasts. Atop his mighty rhino Horatio, Rampage smashes through enemy lines and moves at times with unnerving speed.',
+    :image_path => 'images/heroes/rampage.jpg',
+    :primary_attr => 'Strength'
+  })
+rampage.create_skill_1({
+  :name => 'Stampede',
+  :description => 'Rampage points out a target to his rhino, starting a Stampede that slowly builds in speed and power until reaching the target, stunning them.',
+  :image_path => 'images/skills/stampede.jpg'
+})
+rampage.create_skill_2({
+  :name => 'Might of the Herd',
+  :description => 'The rhino Rampage rides is a born leader, enhancing the movement of any nearby allies and giving Rampage more damage the faster he is moving.',
+  :image_path => 'images/skills/might_of_the_herd.jpg'
+})
+rampage.create_skill_3({
+  :name => 'Horned Strike',
+  :description => 'There is a chance Rampages rhino unleashes a devastating Horned Strike when he begins an attack, doing bonus damage and pushing then enemy backwards.',
+  :image_path => 'images/skills/horned_strike.jpg'
+})
+rampage.create_skill_4({
+  :name => 'Favor of Sol',
+  :description => 'Rampage, favored by Sol, calls upon his power to move so quickly he instantly appears next to an enemy hero of his choosing, dealing damage and pushing them back.',
+  :image_path => 'images/skills/favor_of_sol.jpg'
+})
+rampage.save
+
+
+
+tundra = Hero.create( {
+    :name => 'Tundra',
+    :description => 'ARE WE THERE YETI?',
+    :image_path => 'images/heroes/tundra.jpg',
+    :primary_attr => 'Strength'
+  })
+tundra.create_skill_1({
+  :name => 'Piercing Shards',
+  :description => 'Tundra can control ice and form it into deadly spikes at a whim, letting him unleashing two waves of them towards his enemies. The Shards will curve towards any target, destroying trees in their path.',
+  :image_path => 'images/skills/piercing_shards.jpg'
+})
+tundra.create_skill_2({
+  :name => 'Call of Winter',
+  :description => 'Tundra has lived alone so long he has formed bonds with the birds and wildlife of the mountains. His two favorites are Shiver and Coeurl. When he calls, they will come to his aid in battle for a short time.',
+  :image_path => 'images/skills/call_of_winter.jpg'
+})
+tundra.create_skill_3({
+  :name => 'Coldblooded',
+  :description => 'Tundra gets more and more focused on beating an enemy in battle the longer he fight them. Every attack he lands will increase his attack speed against that target, letting him beat them faster! When he switches targets, though, he has to build his speed back up.',
+  :image_path => 'images/skills/coldblooded.jpg'
+})
+tundra.create_skill_4({
+  :name => 'Avalanche',
+  :description => 'Tundra can control the mountain itself when in a fit of rage, summoning a piece of a glacier to smash his target and toss any nearby enemy heroes away.',
+  :image_path => 'images/skills/avalanche.jpg'
+})
+tundra.save
+
+
+
+
+devourer = Hero.create( {
+    :name => 'Devourer',
+    :description => 'Consuming and destroying all in its path, the corpulent, putrid Devourer exists only to feed. No pain can match the agony of its hunger, and so it shrugs off all attacks, spreading its rot and disease across the battlefield like doom itself.',
+    :image_path => 'images/heroes/devourer.jpg',
+    :primary_attr => 'Strength'
+  })
+devourer.create_skill_1({
+  :name => 'Guttling Hook',
+  :description => 'The Devourer launches his Guttling Hook at a target unit or location. The first targetable unit that touches the hook will be dragged back to the Devourer.',
+  :image_path => 'images/skills/guttling_hook.jpg'
+})
+devourer.create_skill_2({
+  :name => 'Decay',
+  :description => 'The Devourer allows himself to decay, draining his Health over time and releasing poisonous gasses that both damage and slow nearby enemy units.',
+  :image_path => 'images/skills/decay.jpg'
+})
+devourer.create_skill_3({
+  :name => 'Cadaver Armor',
+  :description => 'This grotesque armor increases the Devourers Magic Armor and permanently adds strength for each nearby hero kill or each kill he makes.',
+  :image_path => 'images/skills/cadaver_armor.jpg'
+})
+devourer.create_skill_4({
+  :name => 'Devour',
+  :description => 'The Devourer grabs a target enemy and feasts on their flesh, dealing massive damage for every second he feeds.',
+  :image_path => 'images/skills/devour.jpg'
+})
+devourer.save
+
+
+
+
+electrician = Hero.create( {
+    :name => 'Electrician',
+    :description => 'The finest Legion spies learned mere months ago of a mad archaeologist whose unnatural thirst for knowledge led him into a forbidden pact with the Hellbourne. His discoveries have been used to forge Shocktroopers, men fused with Ancient technology, pulsing with violent energy. These horrifying hybrids bear a tank of liquid lightning upon their backs, and they wield its contents as both sword and shield.',
+    :image_path => 'images/heroes/electrician.jpg',
+    :primary_attr => 'Strength'
+  })
+electrician.create_skill_1({
+  :name => 'Static Grip',
+  :description => 'The Electrician binds a target in a static grip, preventing them from casting spells, moving, attacking, or using items for a short time. The Electrician is dragged slowly toward the target.',
+  :image_path => 'images/skills/static_grip.jpg'
+})
+electrician.create_skill_2({
+  :name => 'Electric Shield',
+  :description => 'The electrician uses electricity to create a shield around himself. The shield will negate a portion of incoming damage at the cost of Electricians Mana.',
+  :image_path => 'images/skills/electric_shield.jpg'
+})
+electrician.create_skill_3({
+  :name => 'Energy Absorption',
+  :description => 'The Electrician discharges energy around him. Nearby enemies are damaged and have their Mana drained. For each enemy with Mana drained, the Electrician absorbs some Mana and gains bonus movement speed.',
+  :image_path => 'images/skills/energy_absorption.jpg'
+})
+electrician.create_skill_4({
+  :name => 'Cleansing Shock',
+  :description => 'Electrician shocks a target unit, removing debuffs and increasing movement speed if the target is an ally, or removing buffs and decreasing movement speed if target is an enemy.',
+  :image_path => 'images/skills/cleansing_shock.jpg'
+})
+electrician.save
+
+
+
+
+kraken = Hero.create( {
+    :name => 'Kraken',
+    :description => 'A scourge upon the seas of Newerth, the Kraken consumed countless victims who were unfortunate enough to travel his waters. Though he be ashore, the Kraken brings the wrath of the ocean to the battlefield, dragging his enemies to depths unknown, unseen, and unwanted.',
+    :image_path => 'images/heroes/kraken.jpg',
+    :primary_attr => 'Strength'
+  })
+kraken.create_skill_1({
+  :name => 'Splash',
+  :description => 'When attacking, Kraken unleashes a mighty attack that damages nearby enemies.',
+  :image_path => 'images/skills/splash.jpg'
+})
+kraken.create_skill_2({
+  :name => 'Tsunami Charge',
+  :description => 'Kraken charges toward a target location with great strength and speed, damaging and knocking aside enemies in his path.',
+  :image_path => 'images/skills/tsunami_charge.jpg'
+})
+kraken.create_skill_3({
+  :name => 'Tidal Pull',
+  :description => 'Krakens presence slows nearby enemies with a continuous tidal pull.',
+  :image_path => 'images/skills/tsunami_pull.jpg'
+})
+kraken.create_skill_4({
+  :name => 'Whirlpool',
+  :description => 'Kraken forms two connected whirlpools, one at a target location and one around himself. After a short time, the whirlpool near Kraken sucks everyone in and spits them out at the targeted location. Enemies are damaged in the process.',
+  :image_path => 'images/skills/whirlpool.jpg'
+})
+kraken.save
+
+
+war_beast = Hero.create( {
+    :name => 'War Beast',
+    :description => 'Once a hound keeper in the underworld, War Beast heeded the call to arms in order to feed the victims of Newerth to his pets. War Beasts allegiance was never questioned. His hunger for carnage remains unending, feeding the animal within.',
+    :image_path => 'images/heroes/war_beast.jpg',
+    :primary_attr => 'Strength'
+  })
+war_beast.create_skill_1({
+  :name => 'Summon Hellhounds',
+  :description => 'War Beast Summons forth Hellhounds from the underworld to attack his enemies.',
+  :image_path => 'images/skills/summon_hellhounds.jpg'
+})
+war_beast.create_skill_2({
+  :name => 'Battle Cry',
+  :description => 'War Beast lets out a mighty battle cry, adding bonus damage to himself and units under his command.',
+  :image_path => 'images/skills/battle_cry.jpg'
+})
+war_beast.create_skill_3({
+  :name => 'Primal Rage',
+  :description => 'War Beast builds his Primal Rage, increasing attack speed and attack damage of himself and units under his control.',
+  :image_path => 'images/skills/primal_rage.jpg'
+})
+war_beast.create_skill_4({
+  :name => 'Metamorphosis',
+  :description => 'War Beast transforms into a Hellhound Lieutenant, gaining a larger health pool, a critical attack, and a speed boost.',
+  :image_path => 'images/skills/metamorphosis.jpg'
+})
+war_beast.save
+
+
+pharaoh = Hero.create( {
+    :name => 'Pharaoh',
+    :description => '
+The Hellbourne unearthed this creature from the shifting sands of the Great Waste. He could originally speak but a single word, which has become his name -- Pharaoh. It seems he must once have been a mighty king, wrapped as he is in golden finery, but now he is simply a monster, summoning forth his dead servants from the grave and conjuring fire and fear across the land.',
+    :image_path => 'images/heroes/pharaoh.jpg',
+    :primary_attr => 'Strength'
+  })
+pharaoh.create_skill_1({
+  :name => 'Hellfire',
+  :description => 'Pharaoh conjures plumes of fire around him for a short duration, hitting random nearby enemy targets, damaging each and stunning them briefly.',
+  :image_path => 'images/skills/hellfire.jpg'
+})
+pharaoh.create_skill_2({
+  :name => 'Wall of Mummies',
+  :description => 'Pharaoh summons a wall of Mummies around himself and anyone close enough to him. Enemies who come close will be pushed away, causing damage and draining some Mana.',
+  :image_path => 'images/skills/wall_of_mummies.jpg'
+})
+pharaoh.create_skill_3({
+  :name => 'Tormented Soul',
+  :description => 'Pharaoh unleashes a tormented soul toward a target location anywhere on the map. The soul self destructs when it reaches the designated location, releasing its dark energy to damage nearby enemies.',
+  :image_path => 'images/skills/tormented_soul.jpg'
+})
+pharaoh.create_skill_4({
+  :name => 'Wrath of the Pharaoh',
+  :description => 'Pharaoh directs all of his focus in a target direction. His focus is so intense it takes physical form as it travels in the desired direction. If it impacts with an enemy unit, it will damage and stun them and Pharaoh will charge toward its location.',
+  :image_path => 'images/skills/wrath_of_the_pharaoh.jpg'
+})
+pharaoh.save
+
+
+accursed = Hero.create( {
+    :name => 'Accursed',
+    :description => '
+Many have speculated as to what great, damned warrior now lives in torment within the burning armor that marches alongside the Hellbourne army. The Accursed, as he is known, screams in agony as he brings fiery devastation to his foes, but his actions seem driven more by a desire to find oblivion than by malice.',
+    :image_path => 'images/heroes/accursed.jpg',
+    :primary_attr => 'Strength'
+  })
+accursed.create_skill_1({
+  :name => 'Cauterize',
+  :description => 'At the cost of some of his own Health, Accursed bursts the air around a target, dealing damage to them if they are an enemy or healing them if they are an ally.',
+  :image_path => 'images/skills/cauterize.jpg'
+})
+accursed.create_skill_2({
+  :name => 'Fire Shield',
+  :description => 'Accursed covers a friendly unit in a shield of flames protecting them from damage and removing harmful effects. If the shield is damaged to its breaking point, it will explode, dealing Magical damage to nearby enemies equal to that of the damage absorbed.',
+  :image_path => 'images/skills/fire_shield.jpg'
+})
+accursed.create_skill_3({
+  :name => 'Sear',
+  :description => 'Causes Accurseds attacks to sear his target, slowing their movement speed. Any ally that attacks the affected unit will be buffed with increased attack speed and movement speed.',
+  :image_path => 'images/skills/sear.jpg'
+})
+accursed.create_skill_4({
+  :name => 'Flame Consumption',
+  :description => 'Accursed summons a powerful fire tornado around himself which, when fueled with damage, causes him to regain his life.',
+  :image_path => 'images/skills/flame_consumption.jpg'
+})
+accursed.save
+
+
+pestilence = Hero.create( {
+    :name => 'Pestilence',
+    :description => 'Once a councilor to the Moon Queen, Pestilence betrayed his people -- for as a male, he could never have come to rule them himself. With his own powers augmented by the Hellbourne, he is as strong as the queen he served in the past. But his arts are unholy: mindless, ravenous insects he calls forth, cruel and violent skills he deploys.',
+    :image_path => 'images/heroes/pestilence.jpg',
+    :primary_attr => 'Strength'
+  })
+pestilence.create_skill_1({
+  :name => 'Flight',
+  :description => 'Pestilence takes limited flight, increasing his movement speed at the cost of taking increased damage',
+  :image_path => 'images/skills/flight.jpg'
+})
+pestilence.create_skill_2({
+  :name => 'Impale',
+  :description => 'Pestilence calls on the aid of his underground insect brethren to strike nearby enemies from underground. Enemies are impaled, causing them to be stunned and take damage, followed by reduced movement speed.',
+  :image_path => 'images/skills/impale.jpg'
+})
+pestilence.create_skill_3({
+  :name => 'Gore',
+  :description => 'Pestilence gains a chance to stab an enemy unit with his frontal horn when attacking, causing them to take some additional damage and be stunned briefly.',
+  :image_path => 'images/skills/gore.jpg'
+})
+pestilence.create_skill_4({
+  :name => 'Swarm',
+  :description => 'Pestilence releases a swarm of locusts at a target, lowering their armor and revealing them temporarily.',
+  :image_path => 'images/skills/swarm.jpg'
+})
+pestilence.save
+
+
+maliken = Hero.create( {
+    :name => 'Maliken',
+    :description => 'Once the greatest defender of mankind and lord over the entire Legion, Maliken walked too close to the darkness and was claimed by it. Now he is nothing more than a slave among the damned -- but his incredible might has only grown in his downfall. Wielding a damned sword fed by his own damned soul, Maliken is the bane of the very heroes he once led into battle.',
+    :image_path => 'images/heroes/maliken.jpg',
+    :primary_attr => 'Strength'
+  })
+maliken.create_skill_1({
+  :name => 'Sword Throw',
+  :description => 'Maliken throws his sword, damaging enemies it hits. Maliken may teleport to his sword while it is in flight.',
+  :image_path => 'images/skills/sword_throw.jpg'
+})
+maliken.create_skill_2({
+  :name => 'Sword of the Damned',
+  :description => 'Malikens legendary weapon, the Sword of the Damned, is capable of two different attack modes: Enchanted Flames grants him increased damage at the cost of his own life, while Life Essence grants him very high life steal at the cost of reduced damage.',
+  :image_path => 'images/skills/sword_of_the_damned.jpg'
+})
+maliken.create_skill_3({
+  :name => 'Hellbourne Zeal',
+  :description => 'Maliken allows his wounds to fuel his rage, increasing his attack speed based on how much health he is missing.',
+  :image_path => 'images/skills/hellbourne_zeal.jpg'
+})
+maliken.create_skill_4({
+  :name => 'possession',
+  :description => 'Maliken allows himself to become possessed, transforming him into a full daemon temporarily. While in this form, Malikens attack becomes ranged and his attacks splash.',
+  :image_path => 'images/skills/possession.jpg'
+})
+maliken.save
+
+
+magmus = Hero.create( {
+    :name => 'Magmus',
+    :description => 'The primordial and elemental creature known as Magmus is no demon, though he fights alongside the Hellbourne. Rather, he was drawn forth from the earth, as evil calls to evil and separate flames join to form an inferno. A holdover from an ancient, cataclysmic age of fire, Magmus dreams of returning Newerth to ash, lava, and cinder, and he wields his considerable might and magic in that terrible cause.',
+    :image_path => 'images/heroes/magmus.jpg',
+    :primary_attr => 'Strength'
+  })
+magmus.create_skill_1({
+  :name => 'Lava Surge',
+  :description => 'Riding on lava, Magmus surges toward a target location, damaging and stunning enemy units in his path.',
+  :image_path => 'images/skills/lava_surge.jpg'
+})
+magmus.create_skill_2({
+  :name => 'Steam Bath',
+  :description => 'Magmus releases extreme heat, toasting the area around him. The resulting steam damages nearby enemy units over time and cloaks Magmus from enemy eyes.',
+  :image_path => 'images/skills/steam_bath.jpg'
+})
+magmus.create_skill_3({
+  :name => 'volcanic_touch',
+  :description => 'Upon attacking enemy units, Magmus flaming mace instills an intense heat in them. If they die while under the effects of this intense heat, they explode, damaging the nearby enemies of Magmus.',
+  :image_path => 'images/skills/volcanic_touch.jpg'
+})
+magmus.create_skill_4({
+  :name => 'Eruption',
+  :description => 'Magmus channels the power of the lava, releasing it after a short delay. The resulting lava grows over time, damaging nearby enemies over several seconds.',
+  :image_path => 'images/skills/eruption.jpg'
+})
+magmus.save
+
+
+deadwood = Hero.create( {
+    :name => 'Deadwood',
+    :description => 'Born of the cruelly tainted lands of Newerth, Deadwood is the undead husk of the first Keeper of the Forest. All around him, living things wilt, and he has little hesitation to destroy trees or use them as weapons. Despite seeking the destruction of Newerth, he still commands the incredible strength and natural powers of a forest guardian, thus combining the cruelty of the Hellbourne with the powers that once belonged only to the Beast Horde.',
+    :image_path => 'images/heroes/deadwood.jpg',
+    :primary_attr => 'Strength'
+  })
+deadwood.create_skill_1({
+  :name => 'Rotten Grasp',
+  :description => 'Calling upon the deep corruption underground, Deadwood can root anyone standing in the targeted area after a short delay.',
+  :image_path => 'images/skills/rotten_grasp.jpg'
+})
+deadwood.create_skill_2({
+  :name => 'Uproot',
+  :description => 'Deadwood can turn any tree into a weapon by simply tearing it out of the ground. While holding a tree, he can throw it at an enemy, mini-stunning and snaring them.',
+  :image_path => 'images/skills/uproot.jpg'
+})
+deadwood.create_skill_3({
+  :name => 'Clearcutting',
+  :description => 'Deadwood, not known for his love of nature, can gain the ability to destroy trees he walks through. Empowered by the destruction he has caused, Deadwood gains movement speed, attack speed, and slow resistance when destroying trees.',
+  :image_path => 'images/skills/clearcutting.jpg'
+})
+deadwood.create_skill_4({
+  :name => 'Willowmaker',
+  :description => 'An ageless and powerful force, Deadwood uses his stump arm to punch an enemy, dealing massive damage. The hit is so powerful a wave of force echoes behind the target, weakening those it hits.',
+  :image_path => 'images/skills/willowmaker.jpg'
+})
+deadwood.save
+

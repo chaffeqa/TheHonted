@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20100613192305) do
     t.string   "name"
     t.text     "description"
     t.string   "image_path"
+    t.string   "primary_attr"
     t.integer  "skill_1_id"
     t.integer  "skill_2_id"
     t.integer  "skill_3_id"
