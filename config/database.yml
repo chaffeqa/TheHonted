@@ -23,7 +23,7 @@ production:
   encoding: utf8
   database: thehonted_production
   username: root
-  password: VoodooPuppet
+  password: chaffee
   host: localhost
   socket: /var/run/mysqld/mysqld.sock
 
